@@ -1,15 +1,57 @@
 {
   "name": "v3",
-  "version": "0.1.0",
-  "private": true,
+  "description": "Personal Website V3",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Marius Ciocoiu",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/misterblack0/v3"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,json,md}": [
+      "prettier --write"
+    ],
+    "*.js": [
+      "eslint --fix"
+    ]
   },
   "dependencies": {
+    "animejs": "^3.1.0",
+    "babel-plugin-styled-components": "^1.10.6",
+    "lodash": "^4.17.19",
     "next": "10.0.4",
+    "prismjs": "^1.17.1",
+    "prop-types": "^15.7.2",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-transition-group": "^4.3.0",
+    "scrollreveal": "^4.0.5",
+    "smooth-scroll": "^16.1.0",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@upstatement/eslint-config": "0.4.3",
+    "@upstatement/prettier-config": "^0.3.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.16.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "husky": "^4.3.6",
+    "lint-staged": "^10.5.2",
+    "prettier": "^2.2.1"
   }
 }
