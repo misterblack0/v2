@@ -1,9 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
-import Fonts from './fonts';
+/* import Fonts from './fonts'; */
 import TransitionStyles from './TransitionStyles';
 
 const GlobalStyle = createGlobalStyle`
-  ${Fonts};
+  ${'' /* ${Fonts}; */}
   :root {
     --dark-navy: #020c1b;
     --navy: #0a192f;
