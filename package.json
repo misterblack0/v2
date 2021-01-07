@@ -32,13 +32,10 @@
     "babel-plugin-styled-components": "^1.10.6",
     "lodash": "^4.17.19",
     "next": "10.0.4",
-    "prismjs": "^1.17.1",
     "prop-types": "^15.7.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-helmet": "^6.1.0",
     "react-transition-group": "^4.3.0",
-    "scrollreveal": "^4.0.7",
     "smooth-scroll": "^16.1.0",
     "styled-components": "^5.2.1"
   },

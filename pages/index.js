@@ -1,23 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Layout from '../src/components/Layout';
+import Layout from '../src/components/layout';
 import Hero from '../src/components/sections/Hero';
 
 const StyledMainContainer = styled.main`
   counter-reset: section;
 `;
 
-const IndexPage = ({ location }) => (
-  <Layout location={location}>
+const IndexPage = () => (
+  <Layout>
     <StyledMainContainer className="fillHeight">
       <Hero />
     </StyledMainContainer>
   </Layout>
 );
-
-IndexPage.propTypes = {
-  location: PropTypes.object.isRequired,
-};
 
 export default IndexPage;
