@@ -9,9 +9,8 @@ const StyledMainContainer = styled.main`
 
 const IndexPage = () => (
   <Layout>
-    <StyledMainContainer className="fillHeight">
-      <Hero />
-    </StyledMainContainer>
+    <Hero />
+    <StyledMainContainer className="fillHeight"></StyledMainContainer>
   </Layout>
 );
 
