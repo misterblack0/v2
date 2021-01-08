@@ -2,14 +2,14 @@ import React from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { email } from '../../config';
-/* import patternBg from 'next/image'; */
+import { loaderDelay } from '../../utils/index';
+import Image from 'next/image';
 
 const Wrapper = styled.div`
-  margin: 0 auto;
-  margin: 0 auto;
-  padding: 100px 0;
+  max-height: 100vh;
   max-width: 100vw;
   background: linear-gradient(to top right, #450b7c, #563cc9, #49e9fb);
+  position: relative;
 
   @media (max-width: 768px) {
     padding: 80px 0;
@@ -19,11 +19,18 @@ const Wrapper = styled.div`
   }
 `;
 
+const BgPattern = styled(Image)`
+  position: relative;
+  z-index: 5;
+`;
+
 const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
   align-items: flex-start;
-  min-height: 100vh;
+  min-height: 60vh;
+  position: relative;
+  z-index: 10;
 
   h1 {
     margin: 0 0 30px 4px;
@@ -74,15 +81,30 @@ const Hero = () => {
 
   return (
     <Wrapper>
+      <BgPattern
+        src="/patternBg.png"
+        alt="background-pattern"
+        layout="fill"
+        objectFit="cover"
+        quality={100}
+      />
       <StyledHeroSection>
         <TransitionGroup component={null}>
           {items.map((item, i) => (
-            <CSSTransition key={i} classNames="fadeup">
+            <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
               <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
             </CSSTransition>
           ))}
         </TransitionGroup>
       </StyledHeroSection>
+      <Image
+        src="/hero.png"
+        alt="hero"
+        layout="intrinsic"
+        width={1920}
+        height={369}
+        quality={100}
+      />
     </Wrapper>
   );
 };
