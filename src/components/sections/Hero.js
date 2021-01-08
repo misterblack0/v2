@@ -1,8 +1,8 @@
-import React from 'react';
+import { React, useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { email } from '../../config';
-import { loaderDelay } from '../../utils/index';
+import { navDelay, loaderDelay } from '../../utils/index';
 import Image from 'next/image';
 
 const Wrapper = styled.div`
@@ -62,6 +62,13 @@ const StyledHeroSection = styled.section`
 `;
 
 const Hero = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setIsMounted(true), navDelay);
+    return () => clearTimeout(timeout);
+  }, []);
+
   const one = <h1>Hi, my name is</h1>;
   const two = <h2 className="big-heading">Marius Ciocoiu.</h2>;
   const three = <h3 className="big-heading">I build things for the web.</h3>;
@@ -82,7 +89,7 @@ const Hero = () => {
   return (
     <Wrapper>
       <BgPattern
-        src="/patternBg.png"
+        src="/pattern.png"
         alt="background-pattern"
         layout="fill"
         objectFit="cover"
@@ -90,11 +97,12 @@ const Hero = () => {
       />
       <StyledHeroSection>
         <TransitionGroup component={null}>
-          {items.map((item, i) => (
-            <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
-              <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
-            </CSSTransition>
-          ))}
+          {isMounted &&
+            items.map((item, i) => (
+              <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
+                <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
+              </CSSTransition>
+            ))}
         </TransitionGroup>
       </StyledHeroSection>
       <Image
