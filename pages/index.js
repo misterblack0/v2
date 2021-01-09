@@ -4,14 +4,14 @@ import Layout from '../src/components/layout';
 import Hero from '../src/components/sections/Hero';
 
 const StyledMainContainer = styled.main`
-  counter-reset: section;
+    counter-reset: section;
 `;
 
 const IndexPage = () => (
-  <Layout>
-    <Hero />
-    <StyledMainContainer className="fillHeight"></StyledMainContainer>
-  </Layout>
+    <Layout>
+        <Hero />
+        <StyledMainContainer className="fillHeight"></StyledMainContainer>
+    </Layout>
 );
 
 export default IndexPage;
