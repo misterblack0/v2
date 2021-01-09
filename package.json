@@ -1,55 +1,55 @@
 {
-  "name": "v3",
-  "description": "Personal Website V3",
-  "version": "1.0.0",
-  "license": "MIT",
-  "author": "Marius Ciocoiu",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/misterblack0/v3"
-  },
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\""
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+    "name": "v2",
+    "description": "Personal Website V2",
+    "version": "1.0.0",
+    "license": "MIT",
+    "author": "Marius Ciocoiu",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/misterblack0/v2"
+    },
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "format": "prettier --write \"**/*.{js,jsx,json,md}\""
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{js,css,json,md}": [
+            "prettier --write"
+        ],
+        "*.js": [
+            "eslint --fix"
+        ]
+    },
+    "dependencies": {
+        "animejs": "^3.1.0",
+        "babel-plugin-styled-components": "^1.10.6",
+        "lodash": "^4.17.19",
+        "next": "10.0.4",
+        "prop-types": "^15.7.2",
+        "react": "17.0.1",
+        "react-dom": "17.0.1",
+        "react-transition-group": "^4.3.0",
+        "scrollreveal": "^4.0.7",
+        "smooth-scroll": "^16.1.0",
+        "styled-components": "^5.2.1"
+    },
+    "devDependencies": {
+        "@upstatement/eslint-config": "0.4.3",
+        "@upstatement/prettier-config": "^0.3.0",
+        "babel-eslint": "^10.1.0",
+        "eslint": "^7.16.0",
+        "eslint-config-prettier": "^6.15.0",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-react": "^7.21.5",
+        "husky": "^4.3.6",
+        "lint-staged": "^10.5.2",
+        "prettier": "^2.2.1"
     }
-  },
-  "lint-staged": {
-    "*.{js,css,json,md}": [
-      "prettier --write"
-    ],
-    "*.js": [
-      "eslint --fix"
-    ]
-  },
-  "dependencies": {
-    "animejs": "^3.1.0",
-    "babel-plugin-styled-components": "^1.10.6",
-    "lodash": "^4.17.19",
-    "next": "10.0.4",
-    "prop-types": "^15.7.2",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "react-transition-group": "^4.3.0",
-    "scrollreveal": "^4.0.7",
-    "smooth-scroll": "^16.1.0",
-    "styled-components": "^5.2.1"
-  },
-  "devDependencies": {
-    "@upstatement/eslint-config": "0.4.3",
-    "@upstatement/prettier-config": "^0.3.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.16.0",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.21.5",
-    "husky": "^4.3.6",
-    "lint-staged": "^10.5.2",
-    "prettier": "^2.2.1"
-  }
 }
