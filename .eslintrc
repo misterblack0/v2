@@ -1,9 +1,0 @@
-{
-    "extends": "@upstatement/eslint-config/react",
-// TODO: Remove when is https://github.com/babel/babel-eslint/issues/530 fixed
-    "rules" : {
-    "template-curly-spacing" : "off",
-    "indent" : "off"
-}
-  }
-
