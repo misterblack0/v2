@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const StyledAboutSection = styled.section`
     max-width: 900px;
@@ -27,7 +27,7 @@ const StyledText = styled.div`
             font-family: var(--font-mono);
             font-size: var(--fz-xs);
             &:before {
-                content: '▹';
+                content: "▹";
                 position: absolute;
                 left: 0;
                 color: var(--green);
@@ -73,7 +73,7 @@ const StyledPic = styled.div`
         }
         &:before,
         &:after {
-            content: '';
+            content: "";
             display: block;
             position: absolute;
             width: 100%;
@@ -97,7 +97,7 @@ const StyledPic = styled.div`
 `;
 
 const About = () => {
-    const skills = ['JavaScript (ES6+)', 'HTML & (S)CSS', 'React', 'WordPress'];
+    const skills = ["JavaScript (ES6+)", "HTML & (S)CSS", "React", "WordPress"];
 
     return (
         <StyledAboutSection id="about">

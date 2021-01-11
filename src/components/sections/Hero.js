@@ -1,9 +1,9 @@
-import { React, useState, useEffect } from 'react';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import styled from 'styled-components';
-import { email } from '../../config';
-import { navDelay, loaderDelay } from '../../utils/index';
-import Image from 'next/image';
+import { React, useState, useEffect } from "react";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import styled from "styled-components";
+import { email } from "../../config";
+import { navDelay, loaderDelay } from "../../utils/index";
+import Image from "next/image";
 
 const Wrapper = styled.div`
     max-height: 100vh;
