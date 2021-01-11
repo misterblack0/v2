@@ -89,7 +89,7 @@ const Hero = () => {
     return (
         <Wrapper>
             <BgPattern
-                src="/pattern.png"
+                src="/hero-pattern-bg.png"
                 alt="background-pattern"
                 layout="fill"
                 objectFit="cover"
