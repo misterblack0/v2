@@ -62,11 +62,14 @@ const GlobalStyle = createGlobalStyle`
     --tab-width: 120px;
     --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
     --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-    --hamburger-width: 30px;
+
+${
+    '' /*     --hamburger-width: 30px;
     --ham-before: top 0.1s ease-in 0.25s, opacity 0.1s ease-in;
     --ham-before-active: top 0.1s ease-out, opacity 0.1s ease-out 0.12s;
     --ham-after: bottom 0.1s ease-in 0.25s, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    --ham-after-active: bottom 0.1s ease-out, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+    --ham-after-active: bottom 0.1s ease-out, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s; */
+}
   }
   html {
     box-sizing: border-box;
@@ -78,8 +81,8 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
   ::selection {
-    background-color: var(--slate);
-    color: var(--lightest-slate);
+    background-color: var(--secondary);
+    color: var(--white);
   }
   body {
     margin: 0;
@@ -89,7 +92,7 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     background-color: var(--white);
-    color: var(--slate);
+    color: var(--dark);
     font-family: var(--font-sans);
     font-size: var(--fz-xl);
     line-height: 1.3;
@@ -176,7 +179,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-size: clamp(40px, 8vw, 60px);
   }
-  .small-heading {
+  .section-heading {
     display: flex;
     align-items: center;
     position: relative;

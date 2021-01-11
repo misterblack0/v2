@@ -20,7 +20,6 @@ const Wrapper = styled.div`
 `;
 
 const BgPattern = styled(Image)`
-    position: relative;
     z-index: 5;
 `;
 

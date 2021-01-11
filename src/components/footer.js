@@ -8,6 +8,7 @@ const StyledFooter = styled.footer`
     min-height: 70px;
     padding: 15px;
     text-align: center;
+    z-index: 1;
 `;
 
 const StyledCredit = styled.div`
