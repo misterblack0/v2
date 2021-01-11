@@ -10,8 +10,7 @@ module.exports = {
     settings: {
         react: {
             version: 'detect' // Automatically detect the react version
-        },
-        quotes: ['double']
+        }
     },
     env: {
         browser: true, // Enables browser globals like window and document
@@ -27,6 +26,7 @@ module.exports = {
     rules: {
         'prettier/prettier': ['error', {}, { usePrettierrc: true }], // Use our .prettierrc file as source
         'template-curly-spacing': 'off', // TODO: Remove when is https://github.com/babel/babel-eslint/issues/530 fixed
-        indent: 'off' // TODO: Remove when is https://github.com/babel/babel-eslint/issues/530 fixed
+        indent: 'off', // TODO: Remove when is https://github.com/babel/babel-eslint/issues/530 fixed
+        quotes: 'off'
     }
 };
