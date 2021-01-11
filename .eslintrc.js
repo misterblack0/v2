@@ -11,7 +11,7 @@ module.exports = {
         react: {
             version: 'detect' // Automatically detect the react version
         },
-        quotes: ['single']
+        quotes: ['double']
     },
     env: {
         browser: true, // Enables browser globals like window and document
