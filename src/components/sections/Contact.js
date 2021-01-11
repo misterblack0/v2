@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import { email } from '../../config';
-import Image from 'next/image';
+import React from "react";
+import styled from "styled-components";
+import { email } from "../../config";
+import Image from "next/image";
 
 const Wrapper = styled.div`
     background: linear-gradient(to bottom right, #c04de2, #340c7f);
