@@ -10,7 +10,8 @@ module.exports = {
     settings: {
         react: {
             version: 'detect' // Automatically detect the react version
-        }
+        },
+        quotes: ['single']
     },
     env: {
         browser: true, // Enables browser globals like window and document
