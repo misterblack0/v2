@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Image from "next/image";
 
 const StyledAboutSection = styled.section`
     max-width: 900px;
@@ -30,7 +31,7 @@ const StyledText = styled.div`
                 content: "▹";
                 position: absolute;
                 left: 0;
-                color: var(--green);
+                color: var(--primary);
                 font-size: var(--fz-sm);
                 line-height: 12px;
             }
@@ -50,7 +51,7 @@ const StyledPic = styled.div`
         position: relative;
         width: 100%;
         border-radius: var(--border-radius);
-        background-color: var(--green);
+        background-color: #a5f8ff;
         &:hover,
         &:focus {
             background: transparent;
@@ -59,16 +60,11 @@ const StyledPic = styled.div`
                 top: 15px;
                 left: 15px;
             }
-            .img {
-                filter: none;
-                mix-blend-mode: normal;
-            }
         }
         .img {
             position: relative;
             border-radius: var(--border-radius);
             mix-blend-mode: multiply;
-            filter: grayscale(100%) contrast(1);
             transition: var(--transition);
         }
         &:before,
@@ -84,11 +80,11 @@ const StyledPic = styled.div`
         &:before {
             top: 0;
             left: 0;
-            background-color: var(--navy);
+            background-color: var(--teal);
             mix-blend-mode: screen;
         }
         &:after {
-            border: 2px solid var(--green);
+            border: 2px solid var(--teal);
             top: 20px;
             left: 20px;
             z-index: -1;
@@ -109,11 +105,6 @@ const About = () => {
                         <p>Hello! I&apos;m Marius, a web developer based in Bucharest, Romania.</p>
 
                         <p>
-                            I am a self-taught developer who is extremely passionate about web
-                            development, linux, blockchain technology and finance.
-                        </p>
-
-                        <p>
                             My goal is to increase my value as a developer and to produce valuable
                             work which can help companies and individuals. I love learning and I
                             believe that our knowledge should have solid foundations. I think that
@@ -131,7 +122,17 @@ const About = () => {
                 </StyledText>
 
                 <StyledPic>
-                    <div className="wrapper">{/* Image */}</div>
+                    <div className="wrapper">
+                        <Image
+                            className="img"
+                            src="/test.jpg"
+                            alt="avatar"
+                            layout="responsive"
+                            width={315}
+                            height={355}
+                            quality={100}
+                        />
+                    </div>
                 </StyledPic>
             </div>
         </StyledAboutSection>
