@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-/* import Icon from "../icons/icon"; */
+import projects from "../../../content/projects";
+import Icon from "../icons/icon";
 
 const StyledProject = styled.div`
     display: grid;
@@ -211,7 +212,51 @@ const Projects = () => {
         <section id="projects">
             <h2 className="section-heading">Some Things I’ve Built</h2>
             <div>
-                <StyledProject></StyledProject>
+                {projects &&
+                    projects.map((i) => {
+                        const { extern, title, tech, github, cover } = projects;
+
+                        return (
+                            <StyledProject key={i}>
+                                <div className="project-content">
+                                    <p className="project-overline">Featured Project</p>
+                                    <h3 className="project-title">{title}</h3>
+                                    <div className="project-description" />
+
+                                    {tech.length && (
+                                        <ul className="project-tech-list">
+                                            {tech.map((tech, i) => (
+                                                <li key={i}>{tech}</li>
+                                            ))}
+                                        </ul>
+                                    )}
+
+                                    <div className="project-links">
+                                        {github && (
+                                            <a href={github} aria-label="GitHub Link">
+                                                <Icon name="GitHub" />
+                                            </a>
+                                        )}
+                                        {extern && (
+                                            <a
+                                                href={extern}
+                                                aria-label="External Link"
+                                                className="external">
+                                                <Icon name="External" />
+                                            </a>
+                                        )}
+                                    </div>
+                                </div>
+
+                                <div className="project-image">
+                                    <a href={extern ? extern : github ? github : "#"}>
+                                        {/* <Img fluid={cover.childImageSharp.fluid} alt={title} className="img" /> */}
+                                        <img src={cover} alt={title} className="img" />
+                                    </a>
+                                </div>
+                            </StyledProject>
+                        );
+                    })}
             </div>
         </section>
     );
