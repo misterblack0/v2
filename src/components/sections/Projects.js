@@ -252,6 +252,7 @@ const Projects = () => {
                                     <a href={extern ? extern : github ? github : "#"}>
                                         {/* <Img fluid={cover.childImageSharp.fluid} alt={title} className="img" /> */}
                                         <img src={cover} alt={title} className="img" />
+                                        {/* test */}
                                     </a>
                                 </div>
                             </StyledProject>
