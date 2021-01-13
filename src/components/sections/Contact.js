@@ -6,7 +6,7 @@ import Image from "next/image";
 const Wrapper = styled.div`
     background: linear-gradient(to bottom right, #c04de2, #340c7f);
     position: relative;
-    height: 90vh;
+    height: 85vh;
 `;
 
 const BgPattern = styled(Image)`
