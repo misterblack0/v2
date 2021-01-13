@@ -102,16 +102,19 @@ const About = () => {
             <div className="inner">
                 <StyledText>
                     <div>
-                        <p>Hello! I&apos;m Marius, a web developer based in Bucharest, Romania.</p>
-
                         <p>
                             My goal is to increase my value as a developer and to produce valuable
-                            work which can help companies and individuals. I love learning and I
-                            believe that our knowledge should have solid foundations. I think that
-                            learning from different domains gives you original ideas, helps you
-                            innovate and brings value in your life. I believe in living better with
-                            less.
+                            work which can help companies and individuals. I&apos;m interested in
+                            the entire frontend spectrum and working on ambitious projects with
+                            positive people.
                         </p>
+                        <p>
+                            I love learning and I believe that our knowledge should have solid
+                            foundations. I am of the opinion that learning from different domains
+                            gives you original ideas, helps you innovate and brings value in your
+                            life.
+                        </p>
+                        <p>I believe in living better with less.</p>
 
                         <p>Here are a few technologies I&apos;ve been working with recently:</p>
                     </div>
