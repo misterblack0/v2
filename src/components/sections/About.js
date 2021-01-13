@@ -31,7 +31,7 @@ const StyledText = styled.div`
                 content: "▹";
                 position: absolute;
                 left: 0;
-                color: var(--primary);
+                color: var(--indigo);
                 font-size: var(--fz-sm);
                 line-height: 12px;
             }
@@ -51,20 +51,15 @@ const StyledPic = styled.div`
         position: relative;
         width: 100%;
         border-radius: var(--border-radius);
-        background-color: #a5f8ff;
         &:hover,
         &:focus {
-            background: transparent;
-            outline: 0;
             &:after {
                 top: 15px;
                 left: 15px;
             }
         }
         .img {
-            position: relative;
             border-radius: var(--border-radius);
-            mix-blend-mode: multiply;
             transition: var(--transition);
         }
         &:before,
@@ -80,11 +75,10 @@ const StyledPic = styled.div`
         &:before {
             top: 0;
             left: 0;
-            background-color: var(--teal);
-            mix-blend-mode: screen;
+            background-color: var(--purple);
         }
         &:after {
-            border: 2px solid var(--teal);
+            border: 2px solid var(--purple);
             top: 20px;
             left: 20px;
             z-index: -1;
@@ -120,7 +114,9 @@ const About = () => {
                     </div>
 
                     <ul className="skills-list">
-                        {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
+                        {skills.map((skill, i) => (
+                            <li key={i}>{skill}</li>
+                        ))}
                     </ul>
                 </StyledText>
 
