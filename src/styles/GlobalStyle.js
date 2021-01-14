@@ -244,7 +244,7 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     &:hover,
     &:focus {
-      color: var(--green);
+      color: var(--purple);
     }
     &.inline-link {
       ${({ theme }) => theme.mixins.inlineLink};

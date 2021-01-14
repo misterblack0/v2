@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import projects from "../../../content/projects";
 import Icon from "../icons/icon";
+import Image from "next/image";
 
 const StyledProject = styled.div`
     display: grid;
@@ -71,13 +72,13 @@ const StyledProject = styled.div`
     }
     .project-overline {
         margin: 10px 0;
-        color: var(--green);
+        color: var(--purple);
         font-family: var(--font-mono);
         font-size: var(--fz-xs);
         font-weight: 400;
     }
     .project-title {
-        color: var(--lightest-slate);
+        color: var(--dark);
         font-size: clamp(24px, 5vw, 28px);
         @media (min-width: 768px) {
             margin: 0 0 20px;
@@ -117,7 +118,7 @@ const StyledProject = styled.div`
         list-style: none;
         li {
             margin: 0 20px 5px 0;
-            color: var(--light-slate);
+            color: var(--gray);
             font-family: var(--font-mono);
             font-size: var(--fz-xs);
             white-space: nowrap;
@@ -136,7 +137,7 @@ const StyledProject = styled.div`
         position: relative;
         margin-top: 10px;
         margin-left: -10px;
-        color: var(--lightest-slate);
+        color: var(--gray);
         a {
             ${({ theme }) => theme.mixins.flexCenter};
             padding: 10px;
@@ -213,15 +214,15 @@ const Projects = () => {
             <h2 className="section-heading">Some Things I’ve Built</h2>
             <div>
                 {projects &&
-                    projects.map((i) => {
-                        const { extern, title, tech, github, cover } = projects;
+                    projects.map((project) => {
+                        const { id, title, description, cover, extern, github, tech } = project;
 
                         return (
-                            <StyledProject key={i}>
+                            <StyledProject key={id}>
                                 <div className="project-content">
                                     <p className="project-overline">Featured Project</p>
                                     <h3 className="project-title">{title}</h3>
-                                    <div className="project-description" />
+                                    <div className="project-description">{description}</div>
 
                                     {tech.length && (
                                         <ul className="project-tech-list">
@@ -250,8 +251,14 @@ const Projects = () => {
 
                                 <div className="project-image">
                                     <a href={extern ? extern : github ? github : "#"}>
-                                        {/* <Img fluid={cover.childImageSharp.fluid} alt={title} className="img" /> */}
-                                        <img src={cover} alt={title} className="img" />
+                                        <Image
+                                            src={cover}
+                                            alt={title}
+                                            layout="responsive"
+                                            width={580}
+                                            height={360}
+                                            quality={100}
+                                        />
                                     </a>
                                 </div>
                             </StyledProject>

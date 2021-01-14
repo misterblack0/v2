@@ -122,7 +122,7 @@ const About = () => {
                     <div className="wrapper">
                         <Image
                             className="img"
-                            src="/test.jpg"
+                            src="/test.webp"
                             alt="avatar"
                             layout="responsive"
                             width={315}
