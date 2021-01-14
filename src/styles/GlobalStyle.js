@@ -31,7 +31,8 @@ const GlobalStyle = createGlobalStyle`
 
     ///////////
 
-    --dark-navy: #020c1b;
+${
+    "" /*     --dark-navy: #020c1b;
     --navy: #0a192f;
     --light-navy: #172a45;
     --lightest-navy: #303C55;
@@ -41,7 +42,8 @@ const GlobalStyle = createGlobalStyle`
     --lightest-slate: #ccd6f6;
   
     --green: #64ffda;
-    --green-tint: rgba(100, 255, 218, 0.1);
+    --green-tint: rgba(100, 255, 218, 0.1); */
+}
 
 
     --font-sans: 'Calibre', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;

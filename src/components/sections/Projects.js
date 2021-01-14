@@ -167,7 +167,7 @@ const StyledProject = styled.div`
         }
         a {
             width: 100%;
-            background-color: var(--green);
+            background-color: var(--purple);
             border-radius: var(--border-radius);
             vertical-align: middle;
             &:hover,
@@ -252,6 +252,7 @@ const Projects = () => {
                                 <div className="project-image">
                                     <a href={extern ? extern : github ? github : "#"}>
                                         <Image
+                                            className="img"
                                             src={cover}
                                             alt={title}
                                             layout="responsive"
