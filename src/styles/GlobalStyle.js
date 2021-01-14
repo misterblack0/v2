@@ -9,8 +9,7 @@ const GlobalStyle = createGlobalStyle`
     --blue: #007bff;
     --indigo: #6610f2;
     --purple: #6f42c1;
-    --pink: #e83e8c;
-    --red: #dc3545;
+
     --orange: #fd7e14;
     --yellow: #ffc107;
     --green: #28a745;
@@ -24,14 +23,13 @@ const GlobalStyle = createGlobalStyle`
     --success: #28a745;
     --info: #17a2b8;
     --warning: #ffc107;
-    --danger: #dc3545;
     --light-navy: #172a45;
     --light-slate: #a8b2d1;
     --light: #f8f9fa;
     --dark: #343a40;
     --dark-purple: #2c1a4d;
-
-
+    --navy-shadow: rgba(2, 12, 27, 0.7);
+    --green-tint: rgba(100, 255, 218, 0.5);
 
     --font-sans: 'Calibre', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
     --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
