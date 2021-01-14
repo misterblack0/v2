@@ -25,25 +25,12 @@ const GlobalStyle = createGlobalStyle`
     --info: #17a2b8;
     --warning: #ffc107;
     --danger: #dc3545;
+    --light-navy: #172a45;
+    --light-slate: #a8b2d1;
     --light: #f8f9fa;
     --dark: #343a40;
+    --dark-purple: #2c1a4d;
 
-
-    ///////////
-
-${
-    "" /*     --dark-navy: #020c1b;
-    --navy: #0a192f;
-    --light-navy: #172a45;
-    --lightest-navy: #303C55;
-    --navy-shadow: rgba(2, 12, 27, 0.7);
-    --slate: #32353b;
-    --light-slate: #a8b2d1;
-    --lightest-slate: #ccd6f6;
-  
-    --green: #64ffda;
-    --green-tint: rgba(100, 255, 218, 0.1); */
-}
 
 
     --font-sans: 'Calibre', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
@@ -203,7 +190,7 @@ ${
       width: 300px;
       height: 1px;
       margin-left: 20px;
-      background-color: var(--lightest-navy);
+      background-color: var(--dark);
       @media (max-width: 1080px) {
         width: 200px;
       }
@@ -306,20 +293,8 @@ ${
       }
     }
   }
-  blockquote {
-    border-left-color: var(--green);
-    border-left-style: solid;
-    border-left-width: 1px;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-left: 1.5rem;
-    p {
-      font-style: italic;
-      font-size: 24px;
-    }
-  }
   hr {
-    background-color: var(--lightest-navy);
+    background-color: var(--dark);
     height: 1px;
     border-width: 0px;
     border-style: initial;
@@ -327,60 +302,12 @@ ${
     border-image: initial;
     margin: 1rem;
   }
-  code {
-    font-family: var(--font-mono);
-    font-size: var(--fz-md);
-  }
   #logo {
     color: var(--green);
   }
-  .overline {
-    color: var(--green);
-    font-family: var(--font-mono);
-    font-size: var(--fz-md);
-    font-weight: 400;
-  }
-  .subtitle {
-    color: var(--green);
-    margin: 0 0 20px 0;
-    font-size: var(--fz-md);
-    font-family: var(--font-mono);
-    font-weight: 400;
-    line-height: 1.5;
-    @media (max-width: 1080px) {
-      font-size: var(--fz-sm);
-    }
-    @media (max-width: 768px) {
-      font-size: var(--fz-xs);
-    }
-    a {
-      ${({ theme }) => theme.mixins.inlineLink};
-      line-height: 1.5;
-    }
-  }
-  .breadcrumb {
-    display: flex;
-    align-items: center;
-    margin-bottom: 50px;
-    color: var(--green);
-    .arrow {
-      display: block;
-      margin-right: 10px;
-      padding-top: 4px;
-    }
-    a {
-      ${({ theme }) => theme.mixins.inlineLink};
-      font-family: var(--font-mono);
-      font-size: var(--fz-sm);
-      font-weight: 600;
-      line-height: 1.5;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-  }
-  .image-outer-wrapper {
+  ${"" /* .image-outer-wrapper {
     height: 100%;
-  }
+  } */}
   ${TransitionStyles};
 `;
 

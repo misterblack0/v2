@@ -93,7 +93,7 @@ const StyledProject = styled.div`
         z-index: 2;
         padding: 25px;
         border-radius: var(--border-radius);
-        background-color: var(--light-navy);
+        background-color: var(--dark-purple);
         color: var(--light-slate);
         font-size: var(--fz-lg);
         @media (max-width: 768px) {
@@ -190,7 +190,7 @@ const StyledProject = styled.div`
                 bottom: 0;
                 z-index: 3;
                 transition: var(--transition);
-                background-color: var(--navy);
+                background-color: var(--gray);
                 mix-blend-mode: screen;
             }
         }

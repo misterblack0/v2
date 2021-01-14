@@ -37,10 +37,7 @@ const Layout = ({ children }) => {
                     <StyledContent>
                         {/* <Nav /> */}
 
-                        <div id="content">
-                            {children}
-                            {/* <Footer  */}
-                        </div>
+                        <div id="content">{children}</div>
                     </StyledContent>
                 </ThemeProvider>
             </div>
