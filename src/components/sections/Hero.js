@@ -17,6 +17,9 @@ const Wrapper = styled.div`
     @media (max-width: 480px) {
         padding: 60px 0;
     }
+
+    .img {
+    }
 `;
 
 const BgPattern = styled(Image)`
@@ -30,6 +33,17 @@ const StyledHeroSection = styled.section`
     min-height: 60vh;
     position: relative;
     z-index: 10;
+    margin: 0 auto;
+    @media (max-width: 1080px) {
+        padding: 100px 100px;
+    }
+    max-width: 1000px;
+    @media (max-width: 768px) {
+        padding: 0 80px;
+    }
+    @media (max-width: 480px) {
+        padding: 0 60px;
+    }
 
     h1 {
         margin: 0 0 30px 4px;
@@ -105,6 +119,7 @@ const Hero = () => {
                 </TransitionGroup>
             </StyledHeroSection>
             <Image
+                className="img"
                 src="/hero.png"
                 alt="hero"
                 layout="intrinsic"

@@ -84,7 +84,7 @@ const StyledProject = styled.div`
             margin: 0 0 20px;
         }
         @media (max-width: 768px) {
-            color: var(--white);
+            color: var(--dark);
         }
     }
     .project-description {
@@ -99,6 +99,7 @@ const StyledProject = styled.div`
         @media (max-width: 768px) {
             padding: 20px 0;
             background-color: transparent;
+            color: var(--dark);
             box-shadow: none;
             &:hover {
                 box-shadow: none;
@@ -202,7 +203,7 @@ const StyledProject = styled.div`
                 object-fit: cover;
                 width: auto;
                 height: 100%;
-                filter: grayscale(100%) contrast(1) brightness(80%);
+                filter: grayscale(100%) contrast(1) brightness(70%);
             }
         }
     }
