@@ -19,6 +19,11 @@ const Wrapper = styled.div`
     }
 
     .img {
+        @media (max-width: 768px) {
+            object-fit: cover;
+            width: auto;
+            height: 100%;
+        }
     }
 `;
 
