@@ -6,9 +6,9 @@ import About from "../src/components/sections/About";
 import Projects from "../src/components/sections/Projects";
 
 const IndexPage = () => (
-    <Layout className="fillHeight">
+    <Layout>
         <Hero />
-        <main>
+        <main className="fillHeight">
             <About />
             <Projects />
         </main>
