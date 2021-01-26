@@ -33,10 +33,7 @@ const Layout = ({ children }) => {
             <div id="root">
                 <ThemeProvider theme={theme}>
                     <GlobalStyle />
-
                     <StyledContent>
-                        {/* <Nav /> */}
-
                         <div id="content">{children}</div>
                     </StyledContent>
                 </ThemeProvider>
