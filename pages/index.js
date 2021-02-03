@@ -9,7 +9,7 @@ import Projects from "../src/components/sections/Projects";
 const IndexPage = () => (
     <>
         <Head>
-            <meta property="og:title" content="OnChain Data" key="title" />
+            <title>Marius Ciocoiu</title>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Head>
 
