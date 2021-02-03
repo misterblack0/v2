@@ -93,8 +93,8 @@ const StyledProject = styled.div`
         z-index: 2;
         padding: 25px;
         border-radius: var(--border-radius);
-        background-color: var(--dark-purple);
-        color: var(--light-slate);
+        background-color: var(--purple);
+        color: var(--white);
         font-size: var(--fz-lg);
         @media (max-width: 768px) {
             padding: 20px 0;
@@ -170,6 +170,7 @@ const StyledProject = styled.div`
             width: 100%;
             background-color: var(--purple);
             border-radius: var(--border-radius);
+            overflow: hidden;
             vertical-align: middle;
             &:hover,
             &:focus {
@@ -197,8 +198,6 @@ const StyledProject = styled.div`
         }
         .img {
             border-radius: var(--border-radius);
-            mix-blend-mode: multiply;
-            filter: grayscale(100%) contrast(1) brightness(90%);
             @media (max-width: 768px) {
                 object-fit: cover;
                 width: auto;

@@ -1,23 +1,23 @@
 const projects = [
     {
         id: 1,
-        title: "Test Project",
+        title: "Personal Website V2",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum incididunt ut consectetur adipiscing labore et dolore magna aliqua.",
-        cover: "/cover.jpg",
-        extern: "https://",
-        github: "https://github.com/",
-        tech: ["Next.js", "TMDB API"]
+            "Second iteration of my personal website built with Next.js and hosted on Vercel.",
+        cover: "/project1.png",
+        extern: "https://mariusciocoiu.com",
+        github: "https://github.com/misterblack0/v2",
+        tech: ["Next.js"]
     },
     {
         id: 2,
-        title: "Portfolio",
+        title: "On-Chain Data of Bitcoin",
         description:
-            "Responsive website built with ReactJS. The site content is passed in as JSON data, auto-generating components for easy maintenance.",
-        cover: "/cover.jpg",
+            "Predicting bitcoin fees for transactions. Fees are displayed in Satoshis/byte of data. Can track unconfirmed transactions, latest transactions and blocks. Features real-time updates.",
+        cover: "/project2.png",
         extern: "https://mariusciocoiu.com",
         github: "https://github.com/",
-        tech: ["Sass", "React"]
+        tech: ["Next.js", "Mempool API"]
     }
 ];
 
