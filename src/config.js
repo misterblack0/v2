@@ -1,5 +1,5 @@
 module.exports = {
-    email: "contact@mariusciocoiu.com",
+    email: "csmarius0@gmail.com",
 
     socialMedia: [
         {
@@ -7,20 +7,8 @@ module.exports = {
             url: "https://github.com/misterblack0"
         },
         {
-            name: "Instagram",
-            url: "https://www.instagram.com/"
-        },
-        {
-            name: "Twitter",
-            url: "https://twitter.com/"
-        },
-        {
             name: "Linkedin",
-            url: "https://www.linkedin.com/in/"
-        },
-        {
-            name: "Codepen",
-            url: "https://codepen.io/"
+            url: "https://www.linkedin.com/"
         }
     ],
 
