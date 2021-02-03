@@ -6,14 +6,14 @@ import Image from "next/image";
 const Wrapper = styled.div`
     background: linear-gradient(to bottom right, #c04de2, #340c7f);
     position: relative;
-    height: 85vh;
+    height: 95vh;
 `;
 
 const BgPattern = styled(Image)`
     z-index: 5;
 `;
 
-const StyledContactSection = styled.section`
+const StyledFooterSection = styled.section`
     max-width: 600px;
     margin: 0 auto 100px;
     text-align: center;
@@ -35,7 +35,7 @@ const StyledContactSection = styled.section`
     }
 `;
 
-const Contact = () => {
+const Footer = () => {
     return (
         <Wrapper>
             <Image
@@ -46,7 +46,7 @@ const Contact = () => {
                 height={369}
                 quality={100}
             />
-            <StyledContactSection id="contact">
+            <StyledFooterSection id="contact">
                 <h2 className="title">Get In Touch</h2>
 
                 <p>
@@ -58,7 +58,7 @@ const Contact = () => {
                 <a className="email-link" href={`mailto:${email}`}>
                     Say Hello
                 </a>
-            </StyledContactSection>
+            </StyledFooterSection>
             <BgPattern
                 src="/footer-pattern-bg.png"
                 alt="background-pattern"
@@ -70,4 +70,4 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+export default Footer;
