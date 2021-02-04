@@ -5,26 +5,18 @@ import TransitionStyles from "./TransitionStyles";
 const GlobalStyle = createGlobalStyle`
   ${"" /* ${Fonts}; */}
   :root {
-
-    --blue: #007bff;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --orange: #fd7e14;
-    --yellow: #ffc107;
-    --green: #28a745;
-    --teal: #20c997;
-    --cyan: #17a2b8;
     --white: #fff;
+    --light: #f8f9fa;
+    --light-gray: #e5e5e5;
     --gray: #6c757d;
     --gray-dark: #343a40;
-    --primary: #007bff;
-    --secondary: #6c757d;
-    --info: #17a2b8;
+    --dark: #343a40;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
     --light-navy: #172a45;
     --light-slate: #a8b2d1;
-    --light: #f8f9fa;
-    --dark: #343a40;
     --dark-purple: #2c1a4d;
+    --shadow: rgba(2,12,27,0.7);
     --green-tint: rgba(100, 255, 218, 0.5);
 
     --font-sans: 'Calibre', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;

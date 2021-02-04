@@ -86,10 +86,8 @@ const StyledContainerSection = styled.section`
 const StyledContainer = styled.div`
     text-align: center;
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+    padding: 0 1.5rem;
+    margin: 0 auto;
 
     @media (min-width: 576px) {
         max-width: calc(100% - 50px);
@@ -102,6 +100,8 @@ const StyledContainer = styled.div`
     }
     p {
         color: var(--white);
+        margin: 2rem 0;
+        line-height: 2rem;
     }
 
     .title {
@@ -110,7 +110,6 @@ const StyledContainer = styled.div`
     }
     .email-link {
         ${({ theme }) => theme.mixins.bigButton};
-        margin-top: 50px;
     }
 `;
 
