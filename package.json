@@ -36,12 +36,13 @@
         "react": "17.0.1",
         "react-dom": "17.0.1",
         "react-transition-group": "^4.3.0",
+        "scrollreveal": "^4.0.5",
         "smooth-scroll": "^16.1.0",
         "styled-components": "^5.2.1"
     },
     "devDependencies": {
         "babel-eslint": "^10.1.0",
-        "eslint": "^7.16.0",
+        "eslint": "^7.19.0",
         "eslint-config-prettier": "^6.15.0",
         "eslint-plugin-jsx-a11y": "^6.4.1",
         "eslint-plugin-prettier": "^3.3.1",

@@ -1,16 +1,20 @@
 import { createGlobalStyle } from "styled-components";
-/* import Fonts from './fonts'; */
 import TransitionStyles from "./TransitionStyles";
 
 const GlobalStyle = createGlobalStyle`
-  ${"" /* ${Fonts}; */}
+
   :root {
     --white: #fff;
-    --light: #f8f9fa;
+    --light: #eeeeee;
+    --blue: #358ed7;
+    --darker-blue: #2a87d3;
+    --gray: gray;
+    --dark-gray: #383838;
+    --black: #1c1c1c;
+${
+    "" /* 
     --light-gray: #e5e5e5;
-    --gray: #6c757d;
-    --gray-dark: #343a40;
-    --dark: #343a40;
+    --dark: #393e46;
     --indigo: #6610f2;
     --purple: #6f42c1;
     --light-navy: #172a45;
@@ -18,9 +22,10 @@ const GlobalStyle = createGlobalStyle`
     --dark-purple: #2c1a4d;
     --shadow: rgba(2,12,27,0.7);
     --green-tint: rgba(100, 255, 218, 0.5);
-
-    --font-sans: 'Calibre', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
-    --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+ */
+}
+    --font-sans: 'Montserrat', sans-serif;
+    --font-mono: 'Inconsolata', monospace;
 
     --fz-xxs: 12px;
     --fz-xs: 13px;
@@ -30,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
     --fz-xl: 20px;
     --fz-xxl: 22px;
     --fz-heading: 32px;
-    --border-radius: 4px;
+    --border-radius: 3px;
     --nav-height: 100px;
     --nav-scroll-height: 70px;
     --tab-height: 42px;
@@ -48,7 +53,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
   ::selection {
-    background-color: var(--secondary);
+    background-color: var(--dark-gray);
     color: var(--white);
   }
   body {
@@ -59,10 +64,11 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     background-color: var(--white);
-    color: var(--dark);
+    color: var(--gray);
     font-family: var(--font-sans);
     font-size: var(--fz-xl);
-    line-height: 1.3;
+    font-weight: 500;
+    line-height: 1.5;
     @media (max-width: 480px) {
       font-size: var(--fz-lg);
     }
@@ -137,17 +143,20 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 600;
     color: var(--lightest-slate);
     line-height: 1.1;
+    color: var(--dark-gray);
   }
   .big-heading {
     margin: 0;
-    font-size: clamp(40px, 8vw, 80px);
+    font-size: clamp(30px, 8vw, 60px);
+    font-weight: 700;
+    color: var(--dark-gray);
   }
   .medium-heading {
     margin: 0;
     font-size: clamp(40px, 8vw, 60px);
   }
   .section-heading {
-    color: var(--dark);
+    color: var(--dark-gray);
     display: flex;
     align-items: center;
     position: relative;
@@ -176,7 +185,7 @@ const GlobalStyle = createGlobalStyle`
       width: 300px;
       height: 1px;
       margin-left: 20px;
-      background-color: var(--dark);
+      background-color: var(--dark-gray);
       @media (max-width: 1080px) {
         width: 200px;
       }
@@ -219,7 +228,7 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     &:hover,
     &:focus {
-      color: var(--purple);
+      color: var(--dark-gray);
     }
     &.inline-link {
       ${({ theme }) => theme.mixins.inlineLink};
@@ -280,7 +289,7 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   hr {
-    background-color: var(--dark);
+    background-color: var(--dark-gray);
     height: 1px;
     border-width: 0px;
     border-style: initial;

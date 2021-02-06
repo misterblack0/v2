@@ -13,13 +13,14 @@ const mixins = {
         align-items: center;
     `,
 
-    bigButton: css`
-        color: var(--purple);
-        background-color: var(--white);
+    smallButton: css`
+        color: var(--green);
+        background-color: var(--blue);
+        color: var(--white);
         border-radius: var(--border-radius);
-        padding: 1.25rem 1.75rem;
-        font-size: var(--fz-sm);
-        font-weight: 600;
+        padding: 0.75rem 1rem;
+        font-size: var(--fz-xs);
+        font-weight: 700;
         font-family: var(--font-mono);
         line-height: 1;
         text-decoration: none;
@@ -28,7 +29,29 @@ const mixins = {
         &:hover,
         &:focus,
         &:active {
-            background-color: var(--light-gray);
+            background-color: var(--darker-blue);
+        }
+        &:after {
+            display: none !important;
+        }
+    `,
+
+    bigButton: css`
+        color: var(--light);
+        background-color: var(--blue);
+        border-radius: var(--border-radius);
+        padding: 1.2rem 1.75rem;
+        font-size: var(--fz-md);
+        font-weight: 900;
+        font-family: var(--font-mono);
+        line-height: 1;
+        text-decoration: none;
+        cursor: pointer;
+        transition: var(--transition);
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: var(--darker-blue);
         }
         &:after {
             display: none !important;

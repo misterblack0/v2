@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Layout from "../src/components/layout";
 import Hero from "../src/components/sections/Hero";
-import Footer from "../src/components/sections/Footer";
+import Contact from "../src/components/sections/Contact";
 import About from "../src/components/sections/About";
 import Projects from "../src/components/sections/Projects";
 
@@ -14,12 +14,12 @@ const IndexPage = () => (
         </Head>
 
         <Layout>
-            <Hero />
             <main className="fillHeight">
+                <Hero />
                 <About />
                 <Projects />
+                <Contact />
             </main>
-            <Footer />
         </Layout>
     </>
 );

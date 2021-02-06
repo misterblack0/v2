@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import styled, { ThemeProvider } from "styled-components";
 import GlobalStyle from "../styles/GlobalStyle";
 import theme from "../styles/theme";
+import Nav from "./nav";
+import Footer from "./sections/Footer";
 
 const StyledContent = styled.div`
     display: flex;
@@ -34,8 +36,14 @@ const Layout = ({ children }) => {
                 <ThemeProvider theme={theme}>
                     <GlobalStyle />
                     <StyledContent>
-                        <div id="content">{children}</div>
+                        <Nav />
+
+                        <div id="content">
+                            {children}
+                            <Footer />
+                        </div>
                     </StyledContent>
+                    )
                 </ThemeProvider>
             </div>
         </>
