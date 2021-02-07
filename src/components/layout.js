@@ -37,7 +37,6 @@ const Layout = ({ children }) => {
                     <GlobalStyle />
                     <StyledContent>
                         <Nav />
-
                         <div id="content">
                             {children}
                             <Footer />
