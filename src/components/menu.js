@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import Head from "next/head";
 import Link from "next/link";
 import styled from "styled-components";
 import { navLinks } from "./../config";
@@ -156,10 +155,6 @@ const Menu = () => {
 
     return (
         <StyledMenu>
-            <Head>
-                <body className={menuOpen ? "blur" : ""} />
-            </Head>
-
             <div ref={wrapperRef}>
                 <StyledHamburgerButton onClick={toggleMenu} menuOpen={menuOpen} ref={buttonRef}>
                     <div className="ham-box">
