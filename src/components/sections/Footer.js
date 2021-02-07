@@ -5,7 +5,7 @@ import Icon from "./../icons/icon";
 
 const StyledFooter = styled.footer`
     width: 100%;
-    padding: 90px 20px 100px;
+    padding: 60px 20px 50px;
     background-color: var(--black);
     text-align: center;
 `;
@@ -17,7 +17,7 @@ const Content = styled.div`
 
     span {
         margin-bottom: 4px;
-        color: #979797;
+        color: var(--gray);
         font-size: 14px;
         line-height: 28px;
         letter-spacing: -0.2px;
@@ -28,12 +28,12 @@ const Content = styled.div`
         width: 100px;
         margin: 30px auto;
         border: 0;
-        border-bottom: 2px solid #383838;
+        border-bottom: 2px solid var(--dark-gray);
     }
 
     p {
         font-size: var(--fz-sm);
-        padding-top: 20px;
+        padding-top: 50px;
     }
 `;
 
