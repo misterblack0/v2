@@ -11,19 +11,7 @@ const GlobalStyle = createGlobalStyle`
     --gray: gray;
     --dark-gray: #383838;
     --black: #1c1c1c;
-${
-    "" /* 
-    --light-gray: #e5e5e5;
-    --dark: #393e46;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --light-navy: #172a45;
-    --light-slate: #a8b2d1;
-    --dark-purple: #2c1a4d;
-    --shadow: rgba(2,12,27,0.7);
-    --green-tint: rgba(100, 255, 218, 0.5);
- */
-}
+
     --font-sans: 'Montserrat', sans-serif;
     --font-mono: 'Inconsolata', monospace;
 

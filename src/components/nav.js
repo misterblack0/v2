@@ -16,7 +16,6 @@ const StyledHeader = styled.header`
     padding: 0px 50px;
     width: 100%;
     height: var(--nav-height);
-    background-color: var(--navy);
     filter: none !important;
     pointer-events: auto !important;
     user-select: auto !important;
@@ -26,9 +25,7 @@ const StyledHeader = styled.header`
         !props.scrolledToTop &&
         css`
             height: var(--nav-scroll-height);
-            transform: translateY(0px);
             background-color: var(--white);
-            box-shadow: 0 10px 30px -10px var(--navy-shadow);
         `};
     ${(props) =>
         props.scrollDirection === "down" &&
@@ -36,7 +33,6 @@ const StyledHeader = styled.header`
         css`
             height: var(--nav-scroll-height);
             transform: translateY(calc(var(--nav-scroll-height) * -1));
-            box-shadow: 0 10px 30px -10px var(--navy-shadow);
         `};
     @media (max-width: 1080px) {
         padding: 0 40px;
@@ -47,7 +43,6 @@ const StyledHeader = styled.header`
 `;
 
 const StyledNav = styled.nav`
-    ${"" /* ${({ theme }) => theme.mixins.flexBetween}; */}
     display: flex;
     justify-content: flex-end;
     align-items: center;
