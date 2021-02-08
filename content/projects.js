@@ -7,7 +7,7 @@ const projects = [
         cover: "/project1.png",
         extern: "https://mariusciocoiu.com",
         github: "https://github.com/misterblack0/v2",
-        tech: ["Next.js"]
+        tech: ["Next.js", "Next.js"]
     }
     /*  {
         id: 2,

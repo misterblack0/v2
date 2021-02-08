@@ -9,10 +9,9 @@ const StyledProject = styled.div`
     align-items: center;
 
     @media (max-width: 768px) {
+       
               flex-direction: column;
             }
-
-
         .project-tech-list {
             
             justify-content: flex-end;
@@ -25,7 +24,6 @@ const StyledProject = styled.div`
         }
         .project-links {
             justify-content: flex-end;
-            margin-left: 0;
             margin-right: -10px;
         }
         .project-image {
@@ -37,14 +35,12 @@ const StyledProject = styled.div`
     .project-content {
         padding-left: 70px;
         width: 50%;
-
         @media (max-width: 1080px) {
            
         }
         @media (max-width: 768px) {
-           
+            width: 100%;
             padding: 40px 40px 30px;
-            
         }
         @media (max-width: 480px) {
             padding: 30px 25px 20px;
@@ -52,44 +48,29 @@ const StyledProject = styled.div`
     }
 
     .project-title {
-        
-        
         color: var(--black);
         font-size: clamp(24px, 5vw, 28px);
         @media (min-width: 768px) {
-            margin: 0 0 20px;
+            
         }
         @media (max-width: 768px) {
             color: var(--dark);
         }
     }
     .project-description {
-        color: var(--gray);
         font-size: var(--fz-md);
         @media (max-width: 768px) {
             padding: 20px 0;
-            background-color: transparent;
-            color: var(--dark);
-            box-shadow: none;
-            &:hover {
-                box-shadow: none;
-            }
-        }
-        a {
-            ${({ theme }) => theme.mixins.inlineLink};
         }
     }
     .project-tech-list {
         display: flex;
         flex-wrap: wrap;
-     
-        
         margin: 25px 0 10px;
         padding: 0;
         list-style: none;
         li {
             margin: 0 20px 5px 0;
-            color: var(--gray);
             font-family: var(--font-mono);
             font-size: var(--fz-xs);
             white-space: nowrap;
@@ -98,17 +79,15 @@ const StyledProject = styled.div`
             margin: 10px 0;
             li {
                 margin: 0 10px 5px 0;
-                color: var(--lightest-slate);
             }
         }
     }
     .project-links {
         display: flex;
         align-items: center;
-     
         margin-top: 10px;
         margin-left: -10px;
-        color: var(--gray);
+
         a {
             ${({ theme }) => theme.mixins.flexCenter};
             padding: 10px;
@@ -120,20 +99,15 @@ const StyledProject = styled.div`
                 }
             }
             svg {
-              ${"" /*   width: 20px;
-                height: 20px; */}
+                width: 22px;
+                height: 22px; 
             }
         }
     }
     .project-image {
-      
         width: 50%;
-    
-        
         @media (max-width: 768px) {
-         
-            height: 100%;
-        
+            
         }
        
         .img {
@@ -142,7 +116,6 @@ const StyledProject = styled.div`
                 object-fit: cover;
                 width: auto;
                 height: 100%;
-              
             }
         }
     }
