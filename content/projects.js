@@ -8,8 +8,8 @@ const projects = [
         extern: "https://mariusciocoiu.com",
         github: "https://github.com/misterblack0/v2",
         tech: ["Next.js"]
-    },
-    {
+    }
+    /*  {
         id: 2,
         title: "On-Chain Data of Bitcoin",
         description:
@@ -18,7 +18,7 @@ const projects = [
         extern: "https://mariusciocoiu.com",
         github: "https://github.com/",
         tech: ["Next.js", "Mempool API"]
-    }
+    } */
 ];
 
 export default projects;

@@ -5,35 +5,16 @@ import Icon from "../icons/icon";
 import Image from "next/image";
 
 const StyledProject = styled.div`
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(12, 1fr);
+    display: flex;
     align-items: center;
-    &:not(:last-of-type) {
-        margin-bottom: 100px;
-        @media (max-width: 768px) {
-            margin-bottom: 70px;
-        }
-        @media (max-width: 480px) {
-            margin-bottom: 30px;
-        }
-    }
-    &:nth-of-type(odd) {
-        .project-content {
-            grid-column: 7 / -1;
-            text-align: right;
-            @media (max-width: 1080px) {
-                grid-column: 5 / -1;
+
+    @media (max-width: 768px) {
+              flex-direction: column;
             }
-            @media (max-width: 768px) {
-                grid-column: 1 / -1;
-                padding: 40px 40px 30px;
-            }
-            @media (max-width: 480px) {
-                padding: 25px 25px 20px;
-            }
-        }
+
+
         .project-tech-list {
+            
             justify-content: flex-end;
             li {
                 margin: 0 0 5px 20px;
@@ -48,37 +29,32 @@ const StyledProject = styled.div`
             margin-right: -10px;
         }
         .project-image {
-            grid-column: 1 / 8;
             @media (max-width: 768px) {
-                grid-column: 1 / -1;
+              
             }
         }
     }
     .project-content {
-        position: relative;
-        grid-column: 1 / 7;
-        grid-row: 1 / -1;
+        padding-left: 70px;
+        width: 50%;
+
         @media (max-width: 1080px) {
-            grid-column: 1 / 9;
+           
         }
         @media (max-width: 768px) {
-            grid-column: 1 / -1;
+           
             padding: 40px 40px 30px;
-            z-index: 5;
+            
         }
         @media (max-width: 480px) {
             padding: 30px 25px 20px;
         }
     }
-    .project-overline {
-        margin: 10px 0;
-        color: var(--purple);
-        font-family: var(--font-mono);
-        font-size: var(--fz-xs);
-        font-weight: 400;
-    }
+
     .project-title {
-        color: var(--dark);
+        
+        
+        color: var(--black);
         font-size: clamp(24px, 5vw, 28px);
         @media (min-width: 768px) {
             margin: 0 0 20px;
@@ -88,14 +64,8 @@ const StyledProject = styled.div`
         }
     }
     .project-description {
-        ${({ theme }) => theme.mixins.boxShadow};
-        position: relative;
-        z-index: 2;
-        padding: 25px;
-        border-radius: var(--border-radius);
-        background-color: var(--purple);
-        color: var(--white);
-        font-size: var(--fz-lg);
+        color: var(--gray);
+        font-size: var(--fz-md);
         @media (max-width: 768px) {
             padding: 20px 0;
             background-color: transparent;
@@ -112,8 +82,8 @@ const StyledProject = styled.div`
     .project-tech-list {
         display: flex;
         flex-wrap: wrap;
-        position: relative;
-        z-index: 2;
+     
+        
         margin: 25px 0 10px;
         padding: 0;
         list-style: none;
@@ -135,7 +105,7 @@ const StyledProject = styled.div`
     .project-links {
         display: flex;
         align-items: center;
-        position: relative;
+     
         margin-top: 10px;
         margin-left: -10px;
         color: var(--gray);
@@ -150,59 +120,29 @@ const StyledProject = styled.div`
                 }
             }
             svg {
-                width: 20px;
-                height: 20px;
+              ${"" /*   width: 20px;
+                height: 20px; */}
             }
         }
     }
     .project-image {
-        ${({ theme }) => theme.mixins.boxShadow};
-        grid-column: 6 / -1;
-        grid-row: 1 / -1;
-        position: relative;
-        z-index: 1;
+      
+        width: 50%;
+    
+        
         @media (max-width: 768px) {
-            grid-column: 1 / -1;
+         
             height: 100%;
-            opacity: 0.25;
+        
         }
-        a {
-            width: 100%;
-            background-color: var(--purple);
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            vertical-align: middle;
-            &:hover,
-            &:focus {
-                background: transparent;
-                &:before,
-                .img {
-                    background: transparent;
-                    filter: none;
-                }
-            }
-            &:before {
-                content: "";
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                z-index: 3;
-                transition: var(--transition);
-                background-color: var(--gray);
-                mix-blend-mode: screen;
-            }
-        }
+       
         .img {
-            border-radius: var(--border-radius);
+           
             @media (max-width: 768px) {
                 object-fit: cover;
                 width: auto;
                 height: 100%;
-                filter: grayscale(100%) contrast(1) brightness(70%);
+              
             }
         }
     }
@@ -219,8 +159,18 @@ const Projects = () => {
 
                         return (
                             <StyledProject key={id}>
+                                <div className="project-image">
+                                    <Image
+                                        className="img"
+                                        src={cover}
+                                        alt={title}
+                                        layout="responsive"
+                                        width={580}
+                                        height={360}
+                                        quality={100}
+                                    />
+                                </div>
                                 <div className="project-content">
-                                    <p className="project-overline">Featured Project</p>
                                     <h3 className="project-title">{title}</h3>
                                     <div className="project-description">{description}</div>
 
@@ -247,20 +197,6 @@ const Projects = () => {
                                             </a>
                                         )}
                                     </div>
-                                </div>
-
-                                <div className="project-image">
-                                    <a href={extern ? extern : github ? github : "#"}>
-                                        <Image
-                                            className="img"
-                                            src={cover}
-                                            alt={title}
-                                            layout="responsive"
-                                            width={580}
-                                            height={360}
-                                            quality={100}
-                                        />
-                                    </a>
                                 </div>
                             </StyledProject>
                         );
