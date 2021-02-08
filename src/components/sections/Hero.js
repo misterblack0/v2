@@ -3,7 +3,6 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styled from "styled-components";
 import { email } from "../../config";
 import { navDelay, loaderDelay } from "../../utils/index";
-// import Image from "next/image";
 
 const StyledHeroSection = styled.section`
     ${({ theme }) => theme.mixins.flexCenter};

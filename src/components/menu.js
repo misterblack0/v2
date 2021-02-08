@@ -40,7 +40,7 @@ const StyledHamburgerButton = styled.button`
         width: var(--hamburger-width);
         height: 2px;
         border-radius: var(--border-radius);
-        background-color: var(--green);
+        background-color: var(--gray);
         transition-duration: 0.22s;
         transition-property: transform;
         transition-delay: ${(props) => (props.menuOpen ? "0.12s" : "0s")};
@@ -58,7 +58,7 @@ const StyledHamburgerButton = styled.button`
             width: var(--hamburger-width);
             height: 2px;
             border-radius: 4px;
-            background-color: var(--green);
+            background-color: var(--gray);
             transition-timing-function: ease;
             transition-duration: 0.15s;
             transition-property: transform;
@@ -92,8 +92,8 @@ const StyledSidebar = styled.aside`
         width: min(75vw, 400px);
         height: 100vh;
         outline: 0;
-        background-color: var(--light-navy);
-        box-shadow: -10px 0px 30px -15px var(--navy-shadow);
+        background-color: var(--white);
+        box-shadow: -10px 0px 30px -15px var(--gray);
         z-index: 9;
         transform: translateX(${(props) => (props.menuOpen ? 0 : 100)}vw);
         visibility: ${(props) => (props.menuOpen ? "visible" : "hidden")};
@@ -103,11 +103,11 @@ const StyledSidebar = styled.aside`
         ${({ theme }) => theme.mixins.flexBetween};
         width: 100%;
         flex-direction: column;
-        color: var(--lightest-slate);
+        color: var(--gray);
         font-family: var(--font-mono);
         text-align: center;
     }
-    ol {
+    ul {
         padding: 0;
         margin: 0;
         list-style: none;
@@ -115,15 +115,9 @@ const StyledSidebar = styled.aside`
         li {
             position: relative;
             margin: 0 auto 20px;
-            font-size: clamp(var(--fz-sm), 4vw, var(--fz-lg));
+            font-size: clamp(var(--fz-sm), 4vw, var(--fz-xl));
             @media (max-width: 600px) {
                 margin: 0 auto 10px;
-            }
-            &:before {
-                display: block;
-                margin-bottom: 5px;
-                color: var(--green);
-                font-size: var(--fz-sm);
             }
         }
         a {
@@ -166,13 +160,13 @@ const Menu = () => {
                     tabIndex={menuOpen ? 1 : -1}>
                     <nav ref={navRef}>
                         {navLinks && (
-                            <ol>
+                            <ul>
                                 {navLinks.map(({ url, name }, i) => (
                                     <li key={i}>
                                         <Link href={url}>{name}</Link>
                                     </li>
                                 ))}
-                            </ol>
+                            </ul>
                         )}
 
                         <a href="/resume.pdf" className="resume-link">
