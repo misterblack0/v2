@@ -41,7 +41,7 @@ const mixins = {
         background-color: var(--blue);
         border-radius: var(--border-radius);
         padding: 1.2rem 1.75rem;
-        font-size: var(--fz-lg);
+        font-size: var(--fz-md);
         font-weight: 700;
         font-family: var(--font-mono);
         line-height: 1;

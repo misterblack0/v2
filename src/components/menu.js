@@ -20,6 +20,7 @@ const StyledHamburgerButton = styled.button`
         margin-right: -15px;
         padding: 15px;
         border: 0;
+        outline: 0;
         background-color: transparent;
         color: inherit;
         text-transform: none;
