@@ -5,21 +5,23 @@ import Icon from "../icons/icon";
 import Image from "next/image";
 
 const StyledProject = styled.div`
-    display: flex;
-    align-items: center;
 
-    @media (max-width: 768px) {
-       
-              flex-direction: column;
+display: flex;
+  
+  align-items: center;
+ 
+
+
+    @media (max-width: 1080px) {
+      
+          flex-direction: column;
             }
         .project-tech-list {
             
             justify-content: flex-end;
             li {
                 margin: 0 0 5px 20px;
-                @media (max-width: 768px) {
-                    margin: 0 0 5px 10px;
-                }
+               
             }
         }
         .project-links {
@@ -27,8 +29,9 @@ const StyledProject = styled.div`
             margin-right: -10px;
         }
         .project-image {
-            @media (max-width: 768px) {
-              
+            
+            @media (max-width: 108px) {
+             
             }
         }
     }
@@ -36,31 +39,33 @@ const StyledProject = styled.div`
         padding-left: 70px;
         width: 50%;
         @media (max-width: 1080px) {
-           
+            padding-left: 0;
+            padding-top: 30px;
+            width: 60%;
+          
         }
         @media (max-width: 768px) {
-            width: 100%;
-            padding: 40px 40px 30px;
+      
+            
         }
         @media (max-width: 480px) {
-            padding: 30px 25px 20px;
+           
         }
     }
 
     .project-title {
         color: var(--black);
         font-size: clamp(24px, 5vw, 28px);
-        @media (min-width: 768px) {
-            
-        }
-        @media (max-width: 768px) {
-            color: var(--dark);
+
+        @media (max-width: 1080px) {
+            text-align: center;
+            white-space: nowrap;
         }
     }
     .project-description {
         font-size: var(--fz-md);
-        @media (max-width: 768px) {
-            padding: 20px 0;
+        @media (max-width: 1080px) {
+           text-align: center;
         }
     }
     .project-tech-list {
@@ -75,11 +80,8 @@ const StyledProject = styled.div`
             font-size: var(--fz-xs);
             white-space: nowrap;
         }
-        @media (max-width: 768px) {
-            margin: 10px 0;
-            li {
-                margin: 0 10px 5px 0;
-            }
+        @media (max-width: 1080px) {
+         justify-content: center;
         }
     }
     .project-links {
@@ -87,7 +89,9 @@ const StyledProject = styled.div`
         align-items: center;
         margin-top: 10px;
         margin-left: -10px;
-
+        @media (max-width: 1080px) {
+         justify-content: center;
+        }
         a {
             ${({ theme }) => theme.mixins.flexCenter};
             padding: 10px;
@@ -106,12 +110,12 @@ const StyledProject = styled.div`
     }
     .project-image {
         width: 50%;
-        @media (max-width: 768px) {
-            
+        @media (max-width: 1080px) {
+           width: 65%;
         }
        
         .img {
-           
+
             @media (max-width: 768px) {
                 object-fit: cover;
                 width: auto;
