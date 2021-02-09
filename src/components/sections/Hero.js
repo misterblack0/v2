@@ -49,7 +49,7 @@ const Hero = () => {
 
     const three = (
         <p>
-            Hi. I produce elegant, performant, and accessible digital experiences. Think, build,
+            Hi. I produce elegant, performant and accessible digital experiences. Think, build,
             launch, measure. <span>Repeat</span>.
         </p>
     );

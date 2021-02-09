@@ -64,6 +64,7 @@ const StyledProject = styled.div`
         }
 
         @media (max-width: 1080px) {
+            margin: 0;
          justify-content: center;
         }
     }
