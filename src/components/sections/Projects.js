@@ -5,51 +5,31 @@ import Icon from "../icons/icon";
 import Image from "next/image";
 
 const StyledProject = styled.div`
-
-display: flex;
-  
-  align-items: center;
- 
-
+    display: flex;
+    align-items: center;
 
     @media (max-width: 1080px) {
-      
           flex-direction: column;
             }
         .project-tech-list {
-            
             justify-content: flex-end;
+
             li {
                 margin: 0 0 5px 20px;
-               
             }
         }
         .project-links {
             justify-content: flex-end;
-            margin-right: -10px;
-        }
-        .project-image {
-            
-            @media (max-width: 108px) {
-             
-            }
         }
     }
     .project-content {
-        padding-left: 70px;
+        margin-left: 70px;
         width: 50%;
+
         @media (max-width: 1080px) {
-            padding-left: 0;
+            margin: 0;
             padding-top: 30px;
             width: 60%;
-          
-        }
-        @media (max-width: 768px) {
-      
-            
-        }
-        @media (max-width: 480px) {
-           
         }
     }
 
@@ -63,7 +43,9 @@ display: flex;
         }
     }
     .project-description {
+        padding-top: 20px;
         font-size: var(--fz-md);
+
         @media (max-width: 1080px) {
            text-align: center;
         }
@@ -74,12 +56,14 @@ display: flex;
         margin: 25px 0 10px;
         padding: 0;
         list-style: none;
+
         li {
             margin: 0 20px 5px 0;
             font-family: var(--font-mono);
             font-size: var(--fz-xs);
             white-space: nowrap;
         }
+
         @media (max-width: 1080px) {
          justify-content: center;
         }
@@ -88,34 +72,31 @@ display: flex;
         display: flex;
         align-items: center;
         margin-top: 10px;
-        margin-left: -10px;
+      
         @media (max-width: 1080px) {
          justify-content: center;
         }
         a {
             ${({ theme }) => theme.mixins.flexCenter};
             padding: 10px;
-            &.external {
-                svg {
-                    width: 22px;
-                    height: 22px;
-                    margin-top: -4px;
-                }
             }
             svg {
-                width: 22px;
-                height: 22px; 
+                width: 28px;
+                height: 28px; 
+
+                @media (max-width: 1080px) {
+                    width: 40px;
+                height: 40px; 
+                }
             }
         }
     }
     .project-image {
         width: 50%;
         @media (max-width: 1080px) {
-           width: 65%;
+           width: 85%;
         }
-       
-        .img {
-
+    .img {
             @media (max-width: 768px) {
                 object-fit: cover;
                 width: auto;
@@ -162,7 +143,7 @@ const Projects = () => {
                                     <div className="project-links">
                                         {github && (
                                             <a href={github} aria-label="GitHub Link">
-                                                <Icon name="GitHub" />
+                                                <Icon name="GitHub2" />
                                             </a>
                                         )}
                                         {extern && (
