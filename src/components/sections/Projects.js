@@ -39,7 +39,6 @@ const StyledProject = styled.div`
 
         @media (max-width: 1080px) {
             text-align: center;
-            white-space: nowrap;
         }
     }
     .project-description {
