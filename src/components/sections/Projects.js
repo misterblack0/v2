@@ -5,6 +5,10 @@ import Icon from "../icons/icon";
 import Image from "next/image";
 
 const StyledProject = styled.div`
+    background-color: var(--lighter-gray);
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: var(--border-radius);
     display: flex;
     align-items: center;
 
@@ -56,9 +60,6 @@ const StyledProject = styled.div`
             font-size: var(--fz-xs);
             white-space: nowrap;
             margin-left: 15px;
-
-            @media (max-width: 1080px) {
-            }
         }
     }
     .project-links {

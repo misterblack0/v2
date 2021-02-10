@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Image from "next/image";
 
 const StyledAboutSection = styled.section`
     max-width: 900px;
@@ -38,57 +37,8 @@ const StyledText = styled.div`
         }
     }
 `;
-const StyledPic = styled.div`
-    position: relative;
-    max-width: 300px;
-    @media (max-width: 768px) {
-        margin: 50px auto 0;
-        width: 70%;
-    }
-    .wrapper {
-        ${({ theme }) => theme.mixins.boxShadow};
-        display: block;
-        position: relative;
-        width: 100%;
-        border-radius: var(--border-radius);
-        &:hover,
-        &:focus {
-            &:after {
-                top: 15px;
-                left: 15px;
-            }
-        }
-        .img {
-            border-radius: var(--border-radius);
-            transition: var(--transition);
-        }
-        &:before,
-        &:after {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: var(--border-radius);
-            transition: var(--transition);
-        }
-        &:before {
-            top: 0;
-            left: 0;
-            background-color: var(--purple);
-        }
-        &:after {
-            border: 2px solid var(--purple);
-            top: 20px;
-            left: 20px;
-            z-index: -1;
-        }
-    }
-`;
 
 const About = () => {
-    const skills = ["JavaScript (ES6+)", "HTML & (S)CSS", "React", "WordPress"];
-
     return (
         <StyledAboutSection id="about">
             <h2 className="section-heading">About Me</h2>
@@ -102,35 +52,9 @@ const About = () => {
                             the entire frontend spectrum and working on ambitious projects with
                             positive people.
                         </p>
-                        <p>
-                            I love learning and I believe that our knowledge should have solid
-                            foundations. I am of the opinion that learning from different domains
-                            gives you original ideas, helps you innovate and brings value in your
-                            life.
-                        </p>
                         <p>I believe in living better with less.</p>
-
-                        <p>Here are a few technologies I&apos;ve been working with recently:</p>
                     </div>
-
-                    <ul className="skills-list">
-                        {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
-                    </ul>
                 </StyledText>
-
-                <StyledPic>
-                    <div className="wrapper">
-                        <Image
-                            className="img"
-                            src="/test.webp"
-                            alt="avatar"
-                            layout="responsive"
-                            width={315}
-                            height={355}
-                            quality={100}
-                        />
-                    </div>
-                </StyledPic>
             </div>
         </StyledAboutSection>
     );

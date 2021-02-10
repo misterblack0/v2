@@ -5,11 +5,12 @@ const GlobalStyle = createGlobalStyle`
 
   :root {
     --white: #fff;
-    --light: #eeeeee;
     --blue: #358ed7;
     --darker-blue: #2a87d3;
     --gray: gray;
     --dark-gray: #383838;
+    --light-gray: #eeeeee;
+    --lighter-gray: #f8f8f8;
     --black: #1c1c1c;
     --shadow: gray;
 
@@ -41,6 +42,7 @@ const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
     width: 100%;
+    scroll-behavior: smooth;
   }
   *,
   *:before,
@@ -136,7 +138,6 @@ const GlobalStyle = createGlobalStyle`
   h6 {
     margin: 0 0 10px 0;
     font-weight: 600;
-    color: var(--lightest-slate);
     line-height: 1.1;
     color: var(--dark-gray);
   }
@@ -168,7 +169,7 @@ const GlobalStyle = createGlobalStyle`
       width: 100%;
       height: 1px;
       margin-left: 20px;
-      background-color: var(--light);
+      background-color: var(--light-gray);
       @media (max-width: 1080px) {
         width: 200px;
       }

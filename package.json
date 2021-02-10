@@ -28,16 +28,14 @@
         ]
     },
     "dependencies": {
-        "animejs": "^3.1.0",
         "babel-plugin-styled-components": "^1.10.6",
         "lodash": "^4.17.19",
         "next": "10.0.4",
         "prop-types": "^15.7.2",
         "react": "17.0.1",
         "react-dom": "17.0.1",
+        "react-spring": "^8.0.27",
         "react-transition-group": "^4.3.0",
-        "scrollreveal": "^4.0.5",
-        "smooth-scroll": "^16.1.0",
         "styled-components": "^5.2.1"
     },
     "devDependencies": {
