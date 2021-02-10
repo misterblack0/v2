@@ -45,38 +45,40 @@ const StyledProject = styled.div`
         flex-wrap: wrap;
         margin: 25px 0 10px;
         list-style: none;
+        padding-left: 0;
 
         @media (max-width: 1080px) {
             justify-content: center;
         }
 
         li {
-            margin: 0 20px 5px 0;
             font-family: var(--font-mono);
             font-size: var(--fz-xs);
             white-space: nowrap;
-        }
-    }
-        .project-links {
-            display: flex;
-            justify-content: flex-end;
-            margin-top: 10px;
+            margin-left: 15px;
 
             @media (max-width: 1080px) {
-                justify-content: center;
             }
+        }
+    }
+    .project-links {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
 
-            a {
-                margin-left: 10px;
-            }
-            svg {
-                width: 28px;
-                height: 28px;
+        @media (max-width: 1080px) {
+            justify-content: center;
+        }
+        a {
+            margin-left: 10px;
+        }
+        svg {
+            width: 28px;
+            height: 28px;
 
-                @media (max-width: 1080px) {
-                    width: 40px;
-                    height: 40px;
-                }
+            @media (max-width: 1080px) {
+                width: 40px;
+                height: 40px;
             }
         }
     }
