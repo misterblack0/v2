@@ -9,19 +9,9 @@ const StyledProject = styled.div`
     align-items: center;
 
     @media (max-width: 1080px) {
-          flex-direction: column;
-            }
-        .project-tech-list {
-            justify-content: flex-end;
-
-            li {
-                margin: 0 0 5px 20px;
-            }
-        }
-        .project-links {
-            justify-content: flex-end;
-        }
+        flex-direction: column;
     }
+
     .project-content {
         margin-left: 70px;
         width: 50%;
@@ -29,7 +19,7 @@ const StyledProject = styled.div`
         @media (max-width: 1080px) {
             margin: 0;
             padding-top: 30px;
-            width: 60%;
+            width: 75%;
         }
     }
 
@@ -46,15 +36,19 @@ const StyledProject = styled.div`
         font-size: var(--fz-md);
 
         @media (max-width: 1080px) {
-           text-align: center;
+            text-align: center;
         }
     }
     .project-tech-list {
         display: flex;
+        justify-content: flex-end;
         flex-wrap: wrap;
         margin: 25px 0 10px;
-        padding: 0;
         list-style: none;
+
+        @media (max-width: 1080px) {
+            justify-content: center;
+        }
 
         li {
             margin: 0 20px 5px 0;
@@ -62,31 +56,26 @@ const StyledProject = styled.div`
             font-size: var(--fz-xs);
             white-space: nowrap;
         }
-
-        @media (max-width: 1080px) {
-            margin: 0;
-         justify-content: center;
-        }
     }
-    .project-links {
-        display: flex;
-        align-items: center;
-        margin-top: 10px;
-      
-        @media (max-width: 1080px) {
-         justify-content: center;
-        }
-        a {
-            ${({ theme }) => theme.mixins.flexCenter};
-            padding: 10px;
+        .project-links {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 10px;
+
+            @media (max-width: 1080px) {
+                justify-content: center;
+            }
+
+            a {
+                margin-left: 10px;
             }
             svg {
                 width: 28px;
-                height: 28px; 
+                height: 28px;
 
                 @media (max-width: 1080px) {
                     width: 40px;
-                height: 40px; 
+                    height: 40px;
                 }
             }
         }
@@ -94,9 +83,9 @@ const StyledProject = styled.div`
     .project-image {
         width: 50%;
         @media (max-width: 1080px) {
-           width: 85%;
+            width: 85%;
         }
-    .img {
+        .img {
             @media (max-width: 768px) {
                 object-fit: cover;
                 width: auto;

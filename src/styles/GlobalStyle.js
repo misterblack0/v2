@@ -155,32 +155,20 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     align-items: center;
     position: relative;
-    margin: 10px 0 40px;
+    margin: 10px 0 50px;
     width: 100%;
     font-size: clamp(26px, 5vw, var(--fz-heading));
     white-space: nowrap;
 
-
-    &:before {
-      position: relative;
-      bottom: 4px;
-      margin-right: 10px;
-      color: var(--green);
-
-      @media (max-width: 480px) {
-        margin-bottom: -3px;
-        margin-right: 5px;
-      }
-    }
     &:after {
       content: '';
       display: block;
       position: relative;
       top: -5px;
-      width: 300px;
+      width: 100%;
       height: 1px;
       margin-left: 20px;
-      background-color: var(--dark-gray);
+      background-color: var(--light);
       @media (max-width: 1080px) {
         width: 200px;
       }
@@ -192,6 +180,7 @@ const GlobalStyle = createGlobalStyle`
       }
     }
   }
+
   }
   img,
   svg,
