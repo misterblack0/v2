@@ -14,9 +14,9 @@ const projects = [
         title: "On-Chain Data of Bitcoin",
         description:
             "Predicting bitcoin fees for transactions. Fees are displayed in Satoshis/byte of data. Can track unconfirmed transactions, latest transactions and blocks. Features real-time updates.",
-        cover: "/project1.png",
-        extern: "https://mariusciocoiu.com",
-        github: "https://github.com/",
+        cover: "/project2.png",
+        extern: "https://onchain-data.vercel.app/",
+        github: "https://github.com/misterblack0/bitcoin-data",
         tech: ["Next.js", "Mempool API"]
     }
 ];

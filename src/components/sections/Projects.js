@@ -7,7 +7,7 @@ import Image from "next/image";
 const StyledProject = styled.div`
     background-color: var(--lighter-gray);
     margin-top: 20px;
-    padding: 10px;
+    padding: 20px;
     border-radius: var(--border-radius);
     display: flex;
     align-items: center;
