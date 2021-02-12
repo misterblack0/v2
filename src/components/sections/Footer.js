@@ -2,12 +2,60 @@ import React from "react";
 import styled from "styled-components";
 import { socialMedia } from "../../config";
 import Icon from "./../icons/icon";
+import { email } from "../../config";
 
 const StyledFooter = styled.footer`
     width: 100%;
+    margin-top: 100px;
     padding: 60px 20px 50px;
-    background-color: var(--black);
+    background-color: var(--blue);
+    color: var(--white);
     text-align: center;
+`;
+
+const Box = styled.div`
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+
+    .box {
+        display: flex;
+        align-items: center;
+        border-radius: 12px;
+        padding: 3rem 2rem;
+        margin-top: -9rem;
+        background-color: #141c3a;
+        box-shadow: 0 5px 5px 0 rgb(0 0 0 / 20%), 0 0 0 1px #141c3a;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+
+    .box-item {
+        ${({ theme }) => theme.mixins.flexCenter};
+
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+        padding: 0.75rem;
+
+        p {
+            font-size: var(--fz-md);
+            color: var(--white);
+        }
+    }
+
+    .title {
+        color: white;
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 1.125;
+    }
+
+    .email-link {
+        ${({ theme }) => theme.mixins.bigButtonTertiary};
+    }
 `;
 
 const Content = styled.div`
@@ -17,7 +65,7 @@ const Content = styled.div`
 
     span {
         margin-bottom: 4px;
-        color: var(--gray);
+        color: var(--white);
         font-size: 14px;
         line-height: 28px;
         letter-spacing: -0.2px;
@@ -49,7 +97,7 @@ const StyledSocial = styled.div`
             fill: white;
 
             &:hover {
-                fill: var(--blue);
+                fill: var(--black);
             }
             &:last-of-type {
                 margin-left: 5px;
@@ -60,6 +108,24 @@ const StyledSocial = styled.div`
 const Footer = () => {
     return (
         <StyledFooter>
+            <Box>
+                <div className="box">
+                    <div className="box-item">
+                        <h1 className="title">Start a project</h1>
+                    </div>
+                    <div className="box-item">
+                        <p>
+                            Interested in working together? We should queue up a chat. I’ll buy the
+                            coffee.
+                        </p>
+                    </div>
+                    <div className="box-item">
+                        <a href={`mailto:${email}`} className="email-link">
+                            Let&apos;s do this
+                        </a>
+                    </div>
+                </div>
+            </Box>
             <Content>
                 <span>
                     &quot;Out of clutter, find simplicity. From discord, find harmony. In the middle
@@ -69,11 +135,11 @@ const Footer = () => {
                 <StyledSocial>
                     {socialMedia &&
                         socialMedia.map(({ url, name }, i) => (
-                            <div key={i}>
+                            <a key={i}>
                                 <a href={url} className="icon" aria-label={name}>
                                     <Icon name={name} />
                                 </a>
-                            </div>
+                            </a>
                         ))}
                 </StyledSocial>
                 <p>&copy; {new Date().getFullYear()} Marius Ciocoiu</p>

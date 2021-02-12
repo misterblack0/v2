@@ -43,13 +43,22 @@ const StyledProject = styled.div`
             text-align: center;
         }
     }
+
+    .projects-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 25px;
+
+        @media (max-width: 1080px) {
+            flex-direction: column;
+        }
+    }
     .project-tech-list {
         display: flex;
         justify-content: flex-end;
         flex-wrap: wrap;
-        margin: 25px 0 10px;
         list-style: none;
-        padding-left: 0;
 
         @media (max-width: 1080px) {
             justify-content: center;
@@ -58,28 +67,74 @@ const StyledProject = styled.div`
         li {
             font-family: var(--font-mono);
             font-size: var(--fz-xs);
+            font-weight: 900;
+            text-transform: uppercase;
             white-space: nowrap;
-            margin-left: 15px;
+            margin-left: 10px;
+            color: var(--gray);
+            border-radius: var(--border-radius);
+            background-color: var(--silver);
+            padding: 5px 10px;
+
+            @media (max-width: 1080px) {
+                margin: 0;
+            }
         }
     }
     .project-links {
         display: flex;
         justify-content: flex-end;
-        margin-top: 10px;
 
         @media (max-width: 1080px) {
             justify-content: center;
         }
+
         a {
+            ${({ theme }) => theme.mixins.flexCenter};
+        }
+
+        a:not(:first-child) {
+            ${({ theme }) => theme.mixins.flexCenter};
             margin-left: 10px;
         }
         svg {
-            width: 28px;
-            height: 28px;
+            padding-left: 5px;
+            width: 25px;
+            height: 25px;
 
             @media (max-width: 1080px) {
                 width: 40px;
                 height: 40px;
+            }
+        }
+    }
+    .project-link {
+        ${({ theme }) => theme.mixins.smallButtonSecondary};
+        background-color: var(--blue);
+        color: var(--white);
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: var(--darker-blue);
+
+            & svg {
+                transition: var(--transition);
+                fill: var(--lighter-gray);
+            }
+        }
+    }
+
+    .project-link-alt {
+        ${({ theme }) => theme.mixins.smallButtonSecondary};
+        &:hover,
+        &:focus,
+        &:active {
+            color: #767676;
+            background-color: #fcfcfc;
+
+            & svg {
+                transition: var(--transition);
+                fill: #696969;
             }
         }
     }
@@ -123,28 +178,34 @@ const Projects = () => {
                                 <div className="project-content">
                                     <h3 className="project-title">{title}</h3>
                                     <div className="project-description">{description}</div>
+                                    <div className="projects-box">
+                                        <div className="project-links">
+                                            {extern && (
+                                                <a
+                                                    href={extern}
+                                                    aria-label="External Link"
+                                                    className="project-link">
+                                                    View project
+                                                    <Icon name="External" />
+                                                </a>
+                                            )}
+                                            {github && (
+                                                <a
+                                                    href={github}
+                                                    className="project-link-alt"
+                                                    aria-label="GitHub Link">
+                                                    Github
+                                                    <Icon name="GitHub2" />
+                                                </a>
+                                            )}
+                                        </div>
 
-                                    {tech.length && (
-                                        <ul className="project-tech-list">
-                                            {tech.map((tech, i) => (
-                                                <li key={i}>{tech}</li>
-                                            ))}
-                                        </ul>
-                                    )}
-
-                                    <div className="project-links">
-                                        {github && (
-                                            <a href={github} aria-label="GitHub Link">
-                                                <Icon name="GitHub2" />
-                                            </a>
-                                        )}
-                                        {extern && (
-                                            <a
-                                                href={extern}
-                                                aria-label="External Link"
-                                                className="external">
-                                                <Icon name="External" />
-                                            </a>
+                                        {tech.length && (
+                                            <ul className="project-tech-list">
+                                                {tech.map((tech, i) => (
+                                                    <li key={i}>{tech}</li>
+                                                ))}
+                                            </ul>
                                         )}
                                     </div>
                                 </div>

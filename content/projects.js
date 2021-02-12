@@ -17,7 +17,7 @@ const projects = [
         cover: "/project2.png",
         extern: "https://onchain-data.vercel.app/",
         github: "https://github.com/misterblack0/bitcoin-data",
-        tech: ["Next.js", "Mempool API"]
+        tech: ["Next.js"]
     }
 ];
 

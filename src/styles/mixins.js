@@ -32,6 +32,30 @@ const mixins = {
         }
     `,
 
+    smallButtonSecondary: css`
+        color: var(--gray);
+        background-color: var(--lighter-gray);
+        border-radius: var(--border-radius);
+        border: 1px solid #cecece;
+        padding: 5px 10px;
+        font-size: var(--fz-xs);
+        font-weight: 700;
+        font-family: var(--font-mono);
+        line-height: 1;
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+        transition: var(--transition);
+        &:hover,
+        &:focus,
+        &:active {
+            & svg {
+                transition: var(--transition);
+                fill: #696969;
+            }
+        }
+    `,
+
     bigButton: css`
         color: var(--white);
         background-color: var(--blue);
@@ -72,29 +96,32 @@ const mixins = {
         }
     `,
 
+    bigButtonTertiary: css`
+        color: var(--white);
+        background-color: transparent;
+        border-radius: 30px;
+        border: 2px solid var(--blue);
+        padding: 1rem 2rem;
+        font-size: var(--fz-lg);
+        font-weight: 700;
+        font-family: var(--font-mono);
+        line-height: 1;
+        text-decoration: none;
+        cursor: pointer;
+        transition: var(--transition);
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: var(--blue);
+        }
+    `,
+
     boxShadow: css`
         box-shadow: 0 10px 30px -15px var(--shadow);
         transition: var(--transition);
         &:hover,
         &:focus {
             box-shadow: 0 20px 30px -15px var(--shadow);
-        }
-    `,
-
-    fancyList: css`
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        font-size: var(--fz-lg);
-        li {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 10px;
-            &:before {
-                content: "▹";
-                position: absolute;
-                left: 0;
-            }
         }
     `
 };

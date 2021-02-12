@@ -3,16 +3,11 @@ import styled from "styled-components";
 
 const StyledAboutSection = styled.section`
     max-width: 900px;
-    .inner {
-        display: grid;
-        grid-template-columns: 3fr 2fr;
-        grid-gap: 50px;
-        @media (max-width: 768px) {
-            display: block;
-        }
-    }
 `;
 const StyledText = styled.div`
+    text-align: center;
+    ${
+        "" /* 
     ul.skills-list {
         display: grid;
         grid-template-columns: repeat(2, minmax(140px, 200px));
@@ -36,6 +31,8 @@ const StyledText = styled.div`
             }
         }
     }
+     */
+    }
 `;
 
 const About = () => {
@@ -52,7 +49,6 @@ const About = () => {
                             the entire frontend spectrum and working on ambitious projects with
                             positive people.
                         </p>
-                        <p>I believe in living better with less.</p>
                     </div>
                 </StyledText>
             </div>
