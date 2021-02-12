@@ -55,6 +55,7 @@ const StyledProject = styled.div`
         }
     }
     .project-tech-list {
+        width: 45%;
         display: flex;
         justify-content: flex-end;
         flex-wrap: wrap;
@@ -62,6 +63,7 @@ const StyledProject = styled.div`
 
         @media (max-width: 1080px) {
             justify-content: center;
+            width: 100%;
         }
 
         li {
@@ -82,11 +84,12 @@ const StyledProject = styled.div`
         }
     }
     .project-links {
+        width: 50%;
         display: flex;
-        justify-content: flex-end;
+        ${({ theme }) => theme.mixins.flexBetween};
 
         @media (max-width: 1080px) {
-            justify-content: center;
+            ${"" /* justify-content: center; */}
         }
 
         a {
@@ -95,7 +98,8 @@ const StyledProject = styled.div`
 
         a:not(:first-child) {
             ${({ theme }) => theme.mixins.flexCenter};
-            margin-left: 10px;
+
+            ${"" /* margin-left: 10px; */}
         }
         svg {
             padding-left: 5px;
@@ -115,7 +119,7 @@ const StyledProject = styled.div`
         &:hover,
         &:focus,
         &:active {
-            background-color: var(--darker-blue);
+            background-color: var(--dark-blue);
 
             & svg {
                 transition: var(--transition);

@@ -24,8 +24,8 @@ const Box = styled.div`
         border-radius: 12px;
         padding: 3rem 2rem;
         margin-top: -9rem;
-        background-color: #141c3a;
-        box-shadow: 0 5px 5px 0 rgb(0 0 0 / 20%), 0 0 0 1px #141c3a;
+        background-color: var(--darker-blue);
+        box-shadow: 0 5px 5px 0 rgb(0 0 0 / 20%), 0 0 0 1px var(--darker-blue);
 
         @media (max-width: 768px) {
             flex-direction: column;
@@ -76,7 +76,7 @@ const Content = styled.div`
         width: 100px;
         margin: 30px auto;
         border: 0;
-        border-bottom: 2px solid var(--dark-gray);
+        border-bottom: 2px solid var(--darker-blue);
     }
 
     p {
@@ -97,7 +97,7 @@ const StyledSocial = styled.div`
             fill: white;
 
             &:hover {
-                fill: var(--black);
+                fill: var(--darker-blue);
             }
             &:last-of-type {
                 margin-left: 5px;

@@ -28,7 +28,7 @@ const mixins = {
         &:hover,
         &:focus,
         &:active {
-            background-color: var(--darker-blue);
+            background-color: var(--dark-blue);
         }
     `,
 
@@ -71,7 +71,7 @@ const mixins = {
         &:hover,
         &:focus,
         &:active {
-            background-color: var(--darker-blue);
+            background-color: var(--dark-blue);
         }
     `,
 

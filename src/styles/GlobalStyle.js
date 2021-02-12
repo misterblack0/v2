@@ -6,13 +6,13 @@ const GlobalStyle = createGlobalStyle`
   :root {
     --white: #fff;
     --blue: #358ed7;
-    --darker-blue: #2a87d3;
+    --dark-blue: #2a87d3;
+    --darker-blue: #141c3a;
     --gray: gray;
     --dark-gray: #383838;
     --silver: #D3D3D3;
     --light-gray: #eeeeee;
     --lighter-gray: #f8f8f8;
-    --black: #1c1c1c;
     --shadow: gray;
 
     --font-sans: 'Montserrat', sans-serif;
