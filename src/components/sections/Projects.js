@@ -87,22 +87,18 @@ const StyledProject = styled.div`
         display: flex;
         align-items: center;
 
-        @media (max-width: 1080px) {
-            ${"" /* justify-content: center; */}
-        }
-
         a {
             ${({ theme }) => theme.mixins.flexCenter};
-        }
 
-        svg {
-            padding-left: 5px;
-            width: 25px;
-            height: 25px;
+            & svg {
+                padding-left: 5px;
+                width: 25px;
+                height: 25px;
 
-            @media (max-width: 1080px) {
-                width: 40px;
-                height: 40px;
+                @media (max-width: 1080px) {
+                    width: 40px;
+                    height: 40px;
+                }
             }
         }
     }
@@ -125,7 +121,7 @@ const StyledProject = styled.div`
     .project-link-alt {
         ${({ theme }) => theme.mixins.smallButtonSecondary};
 
-        ${"" /* margin-left: 10px; */}
+        margin-left: 10px;
         &:hover,
         &:focus,
         &:active {
