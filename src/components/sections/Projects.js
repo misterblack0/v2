@@ -95,9 +95,6 @@ const StyledProject = styled.div`
             padding-left: 5px;
             width: 25px;
             height: 25px;
-
-            @media (max-width: 1080px) {
-            }
         }
     }
     .project-link {
