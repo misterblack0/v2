@@ -45,7 +45,6 @@ const mixins = {
         text-transform: uppercase;
         text-decoration: none;
         cursor: pointer;
-        transition: var(--transition);
         &:hover,
         &:focus,
         &:active {

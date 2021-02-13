@@ -96,11 +96,7 @@ const StyledProject = styled.div`
             width: 25px;
             height: 25px;
 
-            ${
-                "" /*    @media (max-width: 1080px) {
-                width: 40px;
-                height: 40px;
-            } */
+            @media (max-width: 1080px) {
             }
         }
     }
