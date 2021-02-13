@@ -84,9 +84,8 @@ const StyledProject = styled.div`
         }
     }
     .project-links {
-        width: 50%;
         display: flex;
-        ${({ theme }) => theme.mixins.flexBetween};
+        align-items: center;
 
         @media (max-width: 1080px) {
             ${"" /* justify-content: center; */}
@@ -99,7 +98,7 @@ const StyledProject = styled.div`
         a:not(:first-child) {
             ${({ theme }) => theme.mixins.flexCenter};
 
-            ${"" /* margin-left: 10px; */}
+            margin-left: 10px;
         }
         svg {
             padding-left: 5px;
