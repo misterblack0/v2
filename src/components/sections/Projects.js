@@ -89,16 +89,18 @@ const StyledProject = styled.div`
 
         a {
             ${({ theme }) => theme.mixins.flexCenter};
+        }
 
-            & svg {
-                padding-left: 5px;
-                width: 25px;
-                height: 25px;
+        svg {
+            padding-left: 5px;
+            width: 25px;
+            height: 25px;
 
-                @media (max-width: 1080px) {
-                    width: 40px;
-                    height: 40px;
-                }
+            ${
+                "" /*    @media (max-width: 1080px) {
+                width: 40px;
+                height: 40px;
+            } */
             }
         }
     }

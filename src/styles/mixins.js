@@ -37,7 +37,7 @@ const mixins = {
         background-color: var(--lighter-gray);
         border-radius: var(--border-radius);
         border: 1px solid #cecece;
-        padding: 5px 10px;
+        padding: 0.4rem 10px;
         font-size: var(--fz-xs);
         font-weight: 700;
         font-family: var(--font-mono);
