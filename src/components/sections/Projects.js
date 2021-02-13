@@ -95,11 +95,6 @@ const StyledProject = styled.div`
             ${({ theme }) => theme.mixins.flexCenter};
         }
 
-        a:not(:first-child) {
-            ${({ theme }) => theme.mixins.flexCenter};
-
-            margin-left: 10px;
-        }
         svg {
             padding-left: 5px;
             width: 25px;
@@ -129,6 +124,8 @@ const StyledProject = styled.div`
 
     .project-link-alt {
         ${({ theme }) => theme.mixins.smallButtonSecondary};
+
+        margin-left: 10px;
         &:hover,
         &:focus,
         &:active {
