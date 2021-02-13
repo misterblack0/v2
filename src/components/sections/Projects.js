@@ -125,7 +125,7 @@ const StyledProject = styled.div`
     .project-link-alt {
         ${({ theme }) => theme.mixins.smallButtonSecondary};
 
-        margin-left: 10px;
+        ${"" /* margin-left: 10px; */}
         &:hover,
         &:focus,
         &:active {
