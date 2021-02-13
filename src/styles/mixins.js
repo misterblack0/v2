@@ -37,7 +37,7 @@ const mixins = {
         background-color: var(--lighter-gray);
         border-radius: var(--border-radius);
         border: 1px solid #cecece;
-        padding: 0.4rem 10px;
+        padding: 0.4rem 13px;
         font-size: var(--fz-xs);
         font-weight: 700;
         font-family: var(--font-mono);
@@ -45,14 +45,6 @@ const mixins = {
         text-transform: uppercase;
         text-decoration: none;
         cursor: pointer;
-        &:hover,
-        &:focus,
-        &:active {
-            & svg {
-                transition: var(--transition);
-                fill: #696969;
-            }
-        }
     `,
 
     bigButton: css`
