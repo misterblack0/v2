@@ -83,9 +83,9 @@ const StyledProject = styled.div`
         }
     }
     .project-links {
-        flex: 0 0 65%;
         display: flex;
         align-items: center;
+        flex: 0 0 68%;
         white-space: nowrap;
         a {
             ${({ theme }) => theme.mixins.flexCenter};
