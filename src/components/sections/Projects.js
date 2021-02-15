@@ -62,8 +62,7 @@ const StyledProject = styled.div`
         padding: 0;
 
         @media (max-width: 1080px) {
-            justify-content: space-evenly;
-            width: 50%;
+            justify-content: center;
         }
 
         li {
@@ -72,7 +71,7 @@ const StyledProject = styled.div`
             font-weight: 900;
             text-transform: uppercase;
             white-space: nowrap;
-            ${"" /* margin-left: 10px; */}
+            margin-left: 10px;
             color: var(--gray);
             border-radius: var(--border-radius);
             background-color: var(--silver);
