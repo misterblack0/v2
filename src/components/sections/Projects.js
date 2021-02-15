@@ -59,10 +59,11 @@ const StyledProject = styled.div`
         justify-content: flex-end;
         flex-wrap: wrap;
         list-style: none;
+        padding: 0;
 
         @media (max-width: 1080px) {
-            justify-content: center;
-            width: 100%;
+            justify-content: space-evenly;
+            width: 50%;
         }
 
         li {
@@ -71,21 +72,21 @@ const StyledProject = styled.div`
             font-weight: 900;
             text-transform: uppercase;
             white-space: nowrap;
-            margin-left: 10px;
+            ${"" /* margin-left: 10px; */}
             color: var(--gray);
             border-radius: var(--border-radius);
             background-color: var(--silver);
             padding: 5px 10px;
-
-            @media (max-width: 1080px) {
-                margin: 0;
-            }
         }
     }
     .project-links {
         display: flex;
-        align-items: center;
-        white-space: nowrap;
+        ${"" /* white-space: nowrap; */}
+        @media (max-width: 1080px) {
+            justify-content: center;
+            width: 100%;
+        }
+
         a {
             ${({ theme }) => theme.mixins.flexCenter};
             flex-shrink: 0;
