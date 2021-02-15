@@ -85,10 +85,10 @@ const StyledProject = styled.div`
     .project-links {
         display: flex;
         align-items: center;
-        flex: 0 0 68%;
         white-space: nowrap;
         a {
             ${({ theme }) => theme.mixins.flexCenter};
+            flex-shrink: 0;
         }
 
         svg {
