@@ -77,6 +77,10 @@ const StyledProject = styled.div`
             border-radius: var(--border-radius);
             background-color: var(--silver);
             padding: 5px 10px;
+
+            @media (max-width: 1080px) {
+                margin-top: 10px;
+            }
         }
     }
     .project-links {
