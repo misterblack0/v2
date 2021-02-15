@@ -8,7 +8,8 @@ const StyledHeroSection = styled.section`
     ${({ theme }) => theme.mixins.flexCenter};
     flex-direction: column;
     align-items: flex-start;
-    min-height: 100vh;
+    min-height: 90vh;
+    ${"" /* background: center / contain no-repeat url("test.svg"); */}
 
     h2 {
         margin-top: 10px;
@@ -19,7 +20,7 @@ const StyledHeroSection = styled.section`
         max-width: 500px;
     }
     span {
-        color: var(--black);
+        color: var(--darker-blue);
     }
     .email-link {
         ${({ theme }) => theme.mixins.bigButton};
