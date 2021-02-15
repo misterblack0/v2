@@ -55,7 +55,6 @@ const StyledProject = styled.div`
         }
     }
     .project-tech-list {
-        width: 45%;
         display: flex;
         justify-content: flex-end;
         flex-wrap: wrap;
@@ -84,9 +83,10 @@ const StyledProject = styled.div`
         }
     }
     .project-links {
+        flex: 0 0 65%;
         display: flex;
         align-items: center;
-
+        white-space: nowrap;
         a {
             ${({ theme }) => theme.mixins.flexCenter};
         }
@@ -99,6 +99,7 @@ const StyledProject = styled.div`
     }
     .project-link {
         ${({ theme }) => theme.mixins.smallButtonSecondary};
+        border: 1px solid var(--blue);
         background-color: var(--blue);
         color: var(--white);
         &:hover,
@@ -115,7 +116,6 @@ const StyledProject = styled.div`
 
     .project-link-alt {
         ${({ theme }) => theme.mixins.smallButtonSecondary};
-
         margin-left: 10px;
         &:hover,
         &:focus,

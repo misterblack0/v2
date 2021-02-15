@@ -38,7 +38,7 @@ const StyledText = styled.div`
 const About = () => {
     return (
         <StyledAboutSection id="about">
-            <h2 className="section-heading">About Me</h2>
+            <h2 className="section-heading">Hi, I’m Marius. Nice to meet you.</h2>
 
             <div className="inner">
                 <StyledText>
