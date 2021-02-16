@@ -23,7 +23,6 @@ const mixins = {
         font-family: var(--font-mono);
         line-height: 1;
         text-decoration: none;
-        cursor: pointer;
         transition: var(--transition);
         &:hover,
         &:focus,
@@ -45,7 +44,6 @@ const mixins = {
         line-height: 1;
         text-transform: uppercase;
         text-decoration: none;
-        cursor: pointer;
     `,
 
     bigButton: css`
@@ -58,7 +56,7 @@ const mixins = {
         font-family: var(--font-mono);
         line-height: 1;
         text-decoration: none;
-        cursor: pointer;
+
         transition: var(--transition);
         &:hover,
         &:focus,
@@ -78,7 +76,6 @@ const mixins = {
         font-family: var(--font-mono);
         line-height: 1;
         text-decoration: none;
-        cursor: pointer;
         transition: var(--transition);
         &:hover,
         &:focus,

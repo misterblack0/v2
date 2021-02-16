@@ -9,7 +9,7 @@ const StyledHeroSection = styled.section`
     flex-direction: column;
     align-items: flex-start;
     min-height: 90vh;
-    ${"" /* background: center / contain no-repeat url("test.svg"); */}
+    ${"" /* background: bottom / 60% no-repeat url("test.svg"); */}
 
     h2 {
         margin-top: 10px;

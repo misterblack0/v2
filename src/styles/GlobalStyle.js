@@ -70,21 +70,6 @@ const GlobalStyle = createGlobalStyle`
     @media (max-width: 480px) {
       font-size: var(--fz-lg);
     }
-    &.hidden {
-      overflow: hidden;
-    }
-    &.blur {
-      overflow: hidden;
-      header {
-        background-color: transparent;
-      }
-      #content > * {
-        filter: blur(5px) brightness(0.7);
-        transition: var(--transition);
-        pointer-events: none;
-        user-select: none;
-      }
-    }
   }
   #root {
     min-height: 100vh;
@@ -93,6 +78,7 @@ const GlobalStyle = createGlobalStyle`
     grid-template-columns: 100%;
   }
   main {
+    
     margin: 0 auto;
     width: 100%;
     max-width: 1600px;
@@ -159,20 +145,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 10px 0 50px;
     width: 100%;
     font-size: clamp(26px, 5vw, var(--fz-heading));
-  }
-
-  }
-  img,
-  svg,
-  .image-wrapper {
-    width: 100%;
-    max-width: 100%;
-    vertical-align: middle;
-  }
-  img[alt=""],
-  img:not([alt]) {
-    filter: blur(5px);
-  }
+    }
   svg {
     width: 100%;
     height: 100%;
@@ -194,79 +167,13 @@ const GlobalStyle = createGlobalStyle`
     &:focus {
       color: var(--dark-gray);
     }
-    &.inline-link {
-      ${({ theme }) => theme.mixins.inlineLink};
-    }
   }
   button {
     cursor: pointer;
     border: 0;
     border-radius: 0;
   }
-  input, textarea {
-    border-radius: 0;
-    outline: 0;
-    &:focus {
-      outline: 0;
-    }
-    &:focus,
-    &:active {
-      &::placeholder {
-        opacity: 0.5;
-      }
-    }
-  }
-  p {
-    margin: 0 0 15px 0;
-    &:last-child,
-    &:last-of-type {
-      margin: 0;
-    }
-    & > a {
-      ${({ theme }) => theme.mixins.inlineLink};
-    }
-    & > code {
-      background-color: var(--light-navy);
-      color: var(--white);
-      font-size: var(--fz-sm);
-      border-radius: var(--border-radius);
-      padding: 0.3em 0.5em;
-    }
-  }
-  ul {
-    &.fancy-list {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      font-size: var(--fz-lg);
-      li {
-        position: relative;
-        padding-left: 30px;
-        margin-bottom: 10px;
-        &:before {
-          content: '▹';
-          position: absolute;
-          left: 0;
-          color: var(--green);
-        }
-      }
-    }
-  }
-  hr {
-    background-color: var(--dark-gray);
-    height: 1px;
-    border-width: 0px;
-    border-style: initial;
-    border-color: initial;
-    border-image: initial;
-    margin: 1rem;
-  }
-  #logo {
-    color: var(--green);
-  }
-  ${"" /* .image-outer-wrapper {
-    height: 100%;
-  } */}
+
   ${TransitionStyles};
 `;
 
