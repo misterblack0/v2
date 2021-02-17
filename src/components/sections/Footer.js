@@ -109,7 +109,7 @@ const Footer = () => {
     return (
         <StyledFooter>
             <Box>
-                <div className="box">
+                <div id="contact" className="box">
                     <div className="box-item">
                         <h1 className="title">Start a project</h1>
                     </div>

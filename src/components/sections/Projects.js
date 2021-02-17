@@ -4,6 +4,16 @@ import projects from "../../../content/projects";
 import Icon from "../icons/icon";
 import Image from "next/image";
 
+const StyledSection = styled.div`
+    margin: 0 auto;
+    ${({ theme }) => theme.mixins.padding};
+    max-width: 1600px;
+
+    & section {
+        max-width: 1000px;
+    }
+`;
+
 const StyledProject = styled.div`
     background-color: var(--lighter-gray);
     margin-top: 20px;
@@ -150,65 +160,67 @@ const StyledProject = styled.div`
 
 const Projects = () => {
     return (
-        <section id="projects">
-            <h2 className="section-heading">Some Things I’ve Built</h2>
-            <div>
-                {projects &&
-                    projects.map((project) => {
-                        const { id, title, description, cover, extern, github, tech } = project;
+        <StyledSection>
+            <section id="projects">
+                <h2 className="section-heading">Some Things I’ve Built</h2>
+                <div>
+                    {projects &&
+                        projects.map((project) => {
+                            const { id, title, description, cover, extern, github, tech } = project;
 
-                        return (
-                            <StyledProject key={id}>
-                                <div className="project-image">
-                                    <Image
-                                        className="img"
-                                        src={cover}
-                                        alt={title}
-                                        layout="responsive"
-                                        width={580}
-                                        height={360}
-                                        quality={100}
-                                    />
-                                </div>
-                                <div className="project-content">
-                                    <h3 className="project-title">{title}</h3>
-                                    <div className="project-description">{description}</div>
-                                    <div className="projects-box">
-                                        <div className="project-links">
-                                            {extern && (
-                                                <a
-                                                    href={extern}
-                                                    aria-label="External Link"
-                                                    className="project-link">
-                                                    View project
-                                                    <Icon name="External" />
-                                                </a>
-                                            )}
-                                            {github && (
-                                                <a
-                                                    href={github}
-                                                    className="project-link-alt"
-                                                    aria-label="GitHub Link">
-                                                    Github
-                                                    <Icon name="GitHub2" />
-                                                </a>
+                            return (
+                                <StyledProject key={id}>
+                                    <div className="project-image">
+                                        <Image
+                                            className="img"
+                                            src={cover}
+                                            alt={title}
+                                            layout="responsive"
+                                            width={580}
+                                            height={360}
+                                            quality={100}
+                                        />
+                                    </div>
+                                    <div className="project-content">
+                                        <h3 className="project-title">{title}</h3>
+                                        <div className="project-description">{description}</div>
+                                        <div className="projects-box">
+                                            <div className="project-links">
+                                                {extern && (
+                                                    <a
+                                                        href={extern}
+                                                        aria-label="External Link"
+                                                        className="project-link">
+                                                        View project
+                                                        <Icon name="External" />
+                                                    </a>
+                                                )}
+                                                {github && (
+                                                    <a
+                                                        href={github}
+                                                        className="project-link-alt"
+                                                        aria-label="GitHub Link">
+                                                        Github
+                                                        <Icon name="GitHub2" />
+                                                    </a>
+                                                )}
+                                            </div>
+
+                                            {tech.length && (
+                                                <ul className="project-tech-list">
+                                                    {tech.map((tech, i) => (
+                                                        <li key={i}>{tech}</li>
+                                                    ))}
+                                                </ul>
                                             )}
                                         </div>
-
-                                        {tech.length && (
-                                            <ul className="project-tech-list">
-                                                {tech.map((tech, i) => (
-                                                    <li key={i}>{tech}</li>
-                                                ))}
-                                            </ul>
-                                        )}
                                     </div>
-                                </div>
-                            </StyledProject>
-                        );
-                    })}
-            </div>
-        </section>
+                                </StyledProject>
+                            );
+                        })}
+                </div>
+            </section>
+        </StyledSection>
     );
 };
 

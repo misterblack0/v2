@@ -105,6 +105,19 @@ const mixins = {
         }
     `,
 
+    padding: css`
+        padding: 0 150px;
+        @media (max-width: 1080px) {
+            padding: 0 100px;
+        }
+        @media (max-width: 768px) {
+            padding: 0 50px;
+        }
+        @media (max-width: 480px) {
+            padding: 0 25px;
+        }
+    `,
+
     boxShadow: css`
         box-shadow: 0 10px 30px -15px var(--shadow);
         transition: var(--transition);

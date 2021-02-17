@@ -67,55 +67,38 @@ const GlobalStyle = createGlobalStyle`
     font-size: var(--fz-lg);
     font-weight: 500;
     line-height: 1.5;
+   
     @media (max-width: 480px) {
       font-size: var(--fz-lg);
     }
   }
+
   #root {
     min-height: 100vh;
     display: grid;
     grid-template-rows: 1fr auto;
     grid-template-columns: 100%;
   }
+
+
   main {
-    
     margin: 0 auto;
     width: 100%;
-    max-width: 1600px;
+    ${"" /* max-width: 1600px; */}
     min-height: 100vh;
-    padding: 200px 150px;
-    @media (max-width: 1080px) {
-      padding: 200px 100px;
-    }
-    @media (max-width: 768px) {
-      padding: 150px 50px;
-    }
-    @media (max-width: 480px) {
-      padding: 125px 25px;
-    }
-    &.fillHeight {
-      padding: 0 150px;
-      @media (max-width: 1080px) {
-        padding: 0 100px;
-      }
-      @media (max-width: 768px) {
-        padding: 0 50px;
-      }
-      @media (max-width: 480px) {
-        padding: 0 25px;
-      }
-    }
   }
   section {
     margin: 0 auto;
+    ${"" /* max-width: 1000px; */}
     padding: 100px 0;
-    max-width: 1000px;
     @media (max-width: 768px) {
       padding: 80px 0;
     }
     @media (max-width: 480px) {
       padding: 60px 0;
     }
+    
+}
   }
   h1,
   h2,
@@ -125,12 +108,12 @@ const GlobalStyle = createGlobalStyle`
   h6 {
     margin: 0 0 10px 0;
     font-weight: 600;
-    line-height: 1.1;
+    line-height: 1.2;
     color: var(--dark-gray);
   }
   .big-heading {
     margin: 0;
-    font-size: clamp(30px, 8vw, 60px);
+    font-size: clamp(25px, 8vw, 50px);
     font-weight: 700;
     color: var(--dark-gray);
   }
