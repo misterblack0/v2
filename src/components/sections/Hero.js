@@ -16,7 +16,8 @@ const StyledHeroSection = styled.section`
     align-items: flex-start;
     min-height: 100vh;
     max-width: 1000px;
-
+    ${
+        "" /* 
     @media (max-width: 1080px) {
         padding-top: 200px;
     }
@@ -26,7 +27,8 @@ const StyledHeroSection = styled.section`
     @media (max-width: 480px) {
         padding-top: 125px;
     }
-
+ */
+    }
     h1 {
         color: var(--gray);
         font-size: var(--fz-lg);
