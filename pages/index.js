@@ -13,7 +13,7 @@ const IndexPage = () => (
         </Head>
 
         <Layout>
-            <main className="fillHeight">
+            <main>
                 <Hero />
                 <About />
                 <Projects />

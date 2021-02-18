@@ -135,11 +135,11 @@ const Footer = () => {
                 <StyledSocial>
                     {socialMedia &&
                         socialMedia.map(({ url, name }, i) => (
-                            <a key={i}>
+                            <div key={i}>
                                 <a href={url} className="icon" aria-label={name}>
                                     <Icon name={name} />
                                 </a>
-                            </a>
+                            </div>
                         ))}
                 </StyledSocial>
                 <p>&copy; {new Date().getFullYear()} Marius Ciocoiu</p>

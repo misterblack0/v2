@@ -99,7 +99,7 @@ const GlobalStyle = createGlobalStyle`
     }
     
 }
-  }
+
   h1,
   h2,
   h3,
@@ -134,9 +134,6 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
     fill: currentColor;
     vertical-align: middle;
-    &.feather {
-      fill: none;
-    }
   }
   a {
     display: inline-block;

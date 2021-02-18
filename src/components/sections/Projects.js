@@ -94,7 +94,6 @@ const StyledProject = styled.div`
     }
     .project-links {
         display: flex;
-        ${"" /* white-space: nowrap; */}
         @media (max-width: 1080px) {
             justify-content: center;
             width: 100%;
