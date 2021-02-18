@@ -28,6 +28,7 @@
         ]
     },
     "dependencies": {
+        "babel-eslint": "^10.1.0",
         "babel-plugin-styled-components": "^1.10.6",
         "lodash": "^4.17.19",
         "next": "10.0.4",
@@ -39,7 +40,6 @@
     },
     "devDependencies": {
         "@babel/core": "^7.12.16",
-        "@babel/eslint-parser": "^7.12.16",
         "eslint": "^7.20.0",
         "eslint-config-prettier": "^6.15.0",
         "eslint-plugin-jsx-a11y": "^6.4.1",
