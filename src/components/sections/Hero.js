@@ -6,7 +6,7 @@ import { navDelay, loaderDelay } from "../../utils/index";
 
 const WideLayout = styled.div`
     max-width: 1600px;
-    background: right 20px bottom 20px / 45% no-repeat url("test.svg");
+    background: right 20px bottom 20px / 45% no-repeat url("hero.svg");
 `;
 
 const StyledHeroSection = styled.section`
