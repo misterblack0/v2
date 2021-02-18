@@ -39,7 +39,6 @@
         "styled-components": "^5.2.1"
     },
     "devDependencies": {
-        "@babel/core": "^7.12.16",
         "eslint": "^7.20.0",
         "eslint-config-prettier": "^6.15.0",
         "eslint-plugin-jsx-a11y": "^6.4.1",
