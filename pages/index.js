@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import Layout from "../src/components/layout";
+import Layout from "../src/components/Layout";
 import Hero from "../src/components/sections/Hero";
 import About from "../src/components/sections/About";
 import Projects from "../src/components/sections/Projects";
