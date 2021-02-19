@@ -5,7 +5,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { navDelay } from "../src/utils/index";
-import { Layout } from "../src/components/layout";
+import Layout from "../src/components/layout";
 
 const StyledMainContainer = styled.main`
     ${({ theme }) => theme.mixins.flexCenter};
