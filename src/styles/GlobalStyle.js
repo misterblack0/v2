@@ -118,7 +118,7 @@ const GlobalStyle = createGlobalStyle`
     color: var(--dark-gray);
 
     @media (max-width: 1080px) {
-      font-size: clamp(20px, 8vw, 40px);
+      font-size: clamp(15px, 8vw, 30px);
     }
   }
   .medium-heading {
