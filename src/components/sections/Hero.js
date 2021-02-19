@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from "react";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styled from "styled-components";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { email } from "../../config";
 import { navDelay, loaderDelay } from "../../utils/index";
 
@@ -9,7 +9,7 @@ const WideLayout = styled.div`
     background: right 20px bottom 20px / 45% no-repeat url("hero.svg");
 
     @media (max-width: 1080px) {
-        background: right 10px bottom 70px / 45% no-repeat url("hero.svg");
+        background: none;
     }
 `;
 
@@ -20,22 +20,17 @@ const StyledHeroSection = styled.section`
     align-items: flex-start;
     min-height: 100vh;
     max-width: 1000px;
-    ${
-        "" /* 
-    @media (max-width: 1080px) {
-        padding-top: 200px;
-    }
-    @media (max-width: 768px) {
-        padding-top: 150px;
-    }
-    @media (max-width: 480px) {
-        padding-top: 125px;
-    }
- */
-    }
+
     h1 {
         color: var(--gray);
-        font-size: var(--fz-lg);
+        margin: 0 0 30px 4px;
+        font-family: var(--font-mono);
+        font-size: clamp(var(--fz-md), 5vw, var(--fz-lg));
+        font-weight: 400;
+
+        @media (max-width: 480px) {
+            margin: 0 0 20px 2px;
+        }
     }
 
     h2 {
@@ -43,13 +38,16 @@ const StyledHeroSection = styled.section`
         line-height: 0.9;
         color: #696969;
     }
+
     p {
-        margin: 30px 0;
+        margin: 20px 0;
         max-width: 500px;
     }
+
     span {
         color: var(--darker-blue);
     }
+
     .email-link {
         ${({ theme }) => theme.mixins.bigButton};
     }
@@ -65,7 +63,7 @@ const Hero = () => {
 
     const one = <h1>Hello, my name is</h1>;
     const two = <h2 className="big-heading">Marius Ciocoiu</h2>;
-    const three = <h3 className="big-heading">I build things for the web.</h3>;
+    const three = <h3 className="big-heading">I build stuff for the web</h3>;
     const four = (
         <p>
             I produce elegant, performant and accessible digital experiences. Think, build, launch,

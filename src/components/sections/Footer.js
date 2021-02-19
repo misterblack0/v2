@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { socialMedia } from "../../config";
 import Icon from "./../icons/icon";
+import { socialMedia } from "../../config";
 import { email } from "../../config";
 
 const StyledFooter = styled.footer`
@@ -13,10 +13,9 @@ const StyledFooter = styled.footer`
     text-align: center;
 `;
 
-const Box = styled.div`
+const StyledContactBox = styled.div`
     max-width: 1200px;
     margin: 0 auto;
-    margin-bottom: 30px;
 
     .box {
         display: flex;
@@ -34,7 +33,6 @@ const Box = styled.div`
 
     .box-item {
         ${({ theme }) => theme.mixins.flexCenter};
-
         flex-basis: 0;
         flex-grow: 1;
         flex-shrink: 1;
@@ -62,6 +60,7 @@ const Content = styled.div`
     max-width: 1170px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 30px;
 
     span {
         margin-bottom: 4px;
@@ -99,6 +98,7 @@ const StyledSocial = styled.div`
             &:hover {
                 fill: var(--darker-blue);
             }
+
             &:last-of-type {
                 margin-left: 5px;
             }
@@ -108,7 +108,7 @@ const StyledSocial = styled.div`
 const Footer = () => {
     return (
         <StyledFooter>
-            <Box>
+            <StyledContactBox>
                 <div id="contact" className="box">
                     <div className="box-item">
                         <h1 className="title">Start a project</h1>
@@ -125,7 +125,7 @@ const Footer = () => {
                         </a>
                     </div>
                 </div>
-            </Box>
+            </StyledContactBox>
             <Content>
                 <span>
                     &quot;Out of clutter, find simplicity. From discord, find harmony. In the middle

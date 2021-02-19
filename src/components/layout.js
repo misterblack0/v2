@@ -31,18 +31,16 @@ const Layout = ({ children }) => {
     }, []);
 
     return (
-        <>
-            <div id="root">
-                <ThemeProvider theme={theme}>
-                    <GlobalStyle />
-                    <StyledContent>
-                        <Nav />
-                        {children}
-                        <Footer />
-                    </StyledContent>
-                </ThemeProvider>
-            </div>
-        </>
+        <div id="root">
+            <ThemeProvider theme={theme}>
+                <GlobalStyle />
+                <StyledContent>
+                    <Nav />
+                    {children}
+                    <Footer />
+                </StyledContent>
+            </ThemeProvider>
+        </div>
     );
 };
 

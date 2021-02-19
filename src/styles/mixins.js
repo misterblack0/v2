@@ -55,8 +55,8 @@ const mixins = {
         font-family: var(--font-mono);
         line-height: 1;
         text-decoration: none;
-
         transition: var(--transition);
+
         &:hover,
         &:focus,
         &:active {
@@ -76,6 +76,7 @@ const mixins = {
         line-height: 1;
         text-decoration: none;
         transition: var(--transition);
+
         &:hover,
         &:focus,
         &:active {
@@ -97,6 +98,7 @@ const mixins = {
         text-decoration: none;
         cursor: pointer;
         transition: var(--transition);
+
         &:hover,
         &:focus,
         &:active {
@@ -106,6 +108,7 @@ const mixins = {
 
     padding: css`
         padding: 0 150px;
+
         @media (max-width: 1080px) {
             padding: 0 100px;
         }
@@ -120,6 +123,7 @@ const mixins = {
     boxShadow: css`
         box-shadow: 0 10px 30px -15px var(--shadow);
         transition: var(--transition);
+
         &:hover,
         &:focus {
             box-shadow: 0 20px 30px -15px var(--shadow);

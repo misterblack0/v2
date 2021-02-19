@@ -40,19 +40,23 @@ const GlobalStyle = createGlobalStyle`
     --ham-after: bottom 0.1s ease-in 0.25s, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     --ham-after-active: bottom 0.1s ease-out, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
   }
+
   html {
     box-sizing: border-box;
     width: 100%;
     scroll-behavior: smooth;
   }
+
   *,
   *:before,
   *:after {
     box-sizing: inherit;
   }
+
   ::selection {
     background-color: var(--dark-gray);
     color: var(--white);
+
   }
   body {
     margin: 0;
@@ -84,13 +88,13 @@ const GlobalStyle = createGlobalStyle`
   main {
     margin: 0 auto;
     width: 100%;
-    ${"" /* max-width: 1600px; */}
     min-height: 100vh;
   }
+
   section {
     margin: 0 auto;
-    ${"" /* max-width: 1000px; */}
     padding: 100px 0;
+
     @media (max-width: 768px) {
       padding: 80px 0;
     }
@@ -108,23 +112,22 @@ const GlobalStyle = createGlobalStyle`
   h6 {
     margin: 0 0 10px 0;
     font-weight: 600;
-    line-height: 2;
+    ${"" /* line-height: 1.2; */}
     color: var(--dark-gray);
   }
+
   .big-heading {
     margin: 0;
-    font-size: clamp(25px, 8vw, 50px);
+    font-size: clamp(40px, 5.4vw, 50px);
     font-weight: 700;
     color: var(--dark-gray);
-
-    @media (max-width: 1080px) {
-      font-size: clamp(15px, 8vw, 30px);
-    }
   }
+
   .medium-heading {
     margin: 0;
     font-size: clamp(40px, 8vw, 60px);
   }
+
   .section-heading {
     color: var(--dark-gray);
     text-align: center;
@@ -133,12 +136,14 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     font-size: clamp(26px, 5vw, var(--fz-heading));
     }
+
   svg {
     width: 100%;
     height: 100%;
     fill: currentColor;
     vertical-align: middle;
   }
+
   a {
     display: inline-block;
     text-decoration: none;
@@ -152,6 +157,7 @@ const GlobalStyle = createGlobalStyle`
       color: var(--dark-gray);
     }
   }
+  
   button {
     cursor: pointer;
     border: 0;

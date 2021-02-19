@@ -5,8 +5,8 @@ import Icon from "../icons/icon";
 import Image from "next/image";
 
 const StyledSection = styled.div`
-    margin: 0 auto;
     ${({ theme }) => theme.mixins.padding};
+    margin: 0 auto;
     max-width: 1600px;
 
     & section {
@@ -45,6 +45,7 @@ const StyledProject = styled.div`
             text-align: center;
         }
     }
+
     .project-description {
         padding-top: 20px;
         font-size: var(--fz-md);
@@ -64,6 +65,7 @@ const StyledProject = styled.div`
             flex-direction: column;
         }
     }
+
     .project-tech-list {
         display: flex;
         justify-content: flex-end;
@@ -75,13 +77,16 @@ const StyledProject = styled.div`
             justify-content: center;
         }
 
+        li:not(:first-child) {
+            margin-left: 10px;
+        }
+
         li {
             font-family: var(--font-mono);
             font-size: var(--fz-xs);
             font-weight: 900;
             text-transform: uppercase;
             white-space: nowrap;
-            margin-left: 10px;
             color: var(--gray);
             border-radius: var(--border-radius);
             background-color: var(--silver);
@@ -94,6 +99,7 @@ const StyledProject = styled.div`
     }
     .project-links {
         display: flex;
+
         @media (max-width: 1080px) {
             justify-content: center;
             width: 100%;
@@ -112,9 +118,9 @@ const StyledProject = styled.div`
     }
     .project-link {
         ${({ theme }) => theme.mixins.smallButtonSecondary};
-        border: 1px solid var(--blue);
         background-color: var(--blue);
         color: var(--white);
+
         &:hover,
         &:focus,
         &:active {
@@ -130,6 +136,7 @@ const StyledProject = styled.div`
     .project-link-alt {
         ${({ theme }) => theme.mixins.smallButtonSecondary};
         margin-left: 10px;
+
         &:hover,
         &:focus,
         &:active {
@@ -142,11 +149,14 @@ const StyledProject = styled.div`
             }
         }
     }
+
     .project-image {
         width: 50%;
+
         @media (max-width: 1080px) {
             width: 85%;
         }
+
         .img {
             @media (max-width: 768px) {
                 object-fit: cover;

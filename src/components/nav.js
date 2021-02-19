@@ -34,6 +34,7 @@ const StyledHeader = styled.header`
             height: var(--nav-scroll-height);
             transform: translateY(calc(var(--nav-scroll-height) * -1));
         `};
+
     @media (max-width: 1080px) {
         padding: 0 40px;
     }
@@ -55,20 +56,24 @@ const StyledNav = styled.nav`
 const StyledLinks = styled.div`
     display: flex;
     align-items: center;
+
     @media (max-width: 768px) {
         display: none;
     }
+
     ul {
         ${({ theme }) => theme.mixins.flexBetween};
         padding: 0;
         margin: 0;
         list-style: none;
+
         li {
             margin: 0 5px;
             position: relative;
             font-size: var(--fz-md);
             font-weight: 700;
             color: gray;
+
             a {
                 padding: 10px;
             }

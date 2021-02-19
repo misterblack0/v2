@@ -13,6 +13,7 @@ const StyledMenu = styled.div`
 
 const StyledHamburgerButton = styled.button`
     display: none;
+
     @media (max-width: 768px) {
         ${({ theme }) => theme.mixins.flexCenter};
         position: relative;
@@ -28,12 +29,14 @@ const StyledHamburgerButton = styled.button`
         transition-duration: 0.15s;
         transition-property: opacity, filter;
     }
+
     .ham-box {
         display: inline-block;
         position: relative;
         width: var(--hamburger-width);
         height: 24px;
     }
+
     .ham-box-inner {
         position: absolute;
         top: 50%;
@@ -49,6 +52,7 @@ const StyledHamburgerButton = styled.button`
         transition-timing-function: cubic-bezier(
             ${(props) => (props.menuOpen ? "0.215, 0.61, 0.355, 1" : "0.55, 0.055, 0.675, 0.19")}
         );
+
         &:before,
         &:after {
             content: "";
@@ -64,6 +68,7 @@ const StyledHamburgerButton = styled.button`
             transition-duration: 0.15s;
             transition-property: transform;
         }
+
         &:before {
             width: ${(props) => (props.menuOpen ? "100%" : "120%")};
             top: ${(props) => (props.menuOpen ? "0" : "-10px")};
@@ -71,6 +76,7 @@ const StyledHamburgerButton = styled.button`
             transition: ${({ menuOpen }) =>
                 menuOpen ? "var(--ham-before-active)" : "var(--ham-before)"};
         }
+
         &:after {
             width: ${(props) => (props.menuOpen ? "100%" : "80%")};
             bottom: ${(props) => (props.menuOpen ? "0" : "-10px")};
@@ -83,6 +89,7 @@ const StyledHamburgerButton = styled.button`
 
 const StyledSidebar = styled.aside`
     display: none;
+
     @media (max-width: 768px) {
         ${({ theme }) => theme.mixins.flexCenter};
         position: fixed;
@@ -100,6 +107,7 @@ const StyledSidebar = styled.aside`
         visibility: ${(props) => (props.menuOpen ? "visible" : "hidden")};
         transition: var(--transition);
     }
+
     nav {
         ${({ theme }) => theme.mixins.flexBetween};
         width: 100%;
@@ -108,11 +116,13 @@ const StyledSidebar = styled.aside`
         font-family: var(--font-mono);
         text-align: center;
     }
+
     ul {
         padding: 0;
         margin: 0;
         list-style: none;
         width: 100%;
+
         li {
             position: relative;
             margin: 0 auto 20px;
@@ -121,12 +131,14 @@ const StyledSidebar = styled.aside`
                 margin: 0 auto 10px;
             }
         }
+
         a {
             ${({ theme }) => theme.mixins.link};
             width: 100%;
             padding: 3px 20px 20px;
         }
     }
+
     .resume-link {
         ${({ theme }) => theme.mixins.bigButton};
         padding: 18px 50px;
