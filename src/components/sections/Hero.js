@@ -9,7 +9,7 @@ const WideLayout = styled.div`
     background: right 20px bottom 20px / 45% no-repeat url("hero.svg");
 
     @media (max-width: 1080px) {
-        background: right 10px bottom 50px / 45% no-repeat url("hero.svg");
+        background: right 10px bottom 70px / 45% no-repeat url("hero.svg");
     }
 `;
 

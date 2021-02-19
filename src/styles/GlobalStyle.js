@@ -108,7 +108,7 @@ const GlobalStyle = createGlobalStyle`
   h6 {
     margin: 0 0 10px 0;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 2;
     color: var(--dark-gray);
   }
   .big-heading {
