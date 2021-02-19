@@ -116,6 +116,10 @@ const GlobalStyle = createGlobalStyle`
     font-size: clamp(25px, 8vw, 50px);
     font-weight: 700;
     color: var(--dark-gray);
+
+    @media (max-width: 1080px) {
+      font-size: clamp(20px, 8vw, 40px);
+    }
   }
   .medium-heading {
     margin: 0;

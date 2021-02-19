@@ -7,6 +7,10 @@ import { navDelay, loaderDelay } from "../../utils/index";
 const WideLayout = styled.div`
     max-width: 1600px;
     background: right 20px bottom 20px / 45% no-repeat url("hero.svg");
+
+    @media (max-width: 1080px) {
+        background: right 10px bottom 50px / 45% no-repeat url("hero.svg");
+    }
 `;
 
 const StyledHeroSection = styled.section`
