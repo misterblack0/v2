@@ -35,7 +35,7 @@ const StyledHeroSection = styled.section`
 
     h2 {
         margin-top: 10px;
-        line-height: 0.9;
+        ${"" /* line-height: 0.9; */}
         color: #696969;
     }
 

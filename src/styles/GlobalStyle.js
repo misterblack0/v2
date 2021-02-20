@@ -118,7 +118,7 @@ const GlobalStyle = createGlobalStyle`
 
   .big-heading {
     margin: 0;
-    font-size: clamp(40px, 5.4vw, 50px);
+    font-size: clamp(40px, 8vw, 50px);
     font-weight: 700;
     color: var(--dark-gray);
   }
