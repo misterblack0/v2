@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import projects from "../../../content/projects";
+import projects from "../../projects";
 import Icon from "../icons/icon";
 import Image from "next/image";
 
