@@ -32,8 +32,6 @@ const mixins = {
     `,
 
     smallButtonSecondary: css`
-        color: var(--gray);
-        background-color: var(--lighter-gray);
         border-radius: var(--border-radius);
         padding: 0.4rem 0.6rem;
         font-size: var(--fz-xs);
@@ -60,27 +58,6 @@ const mixins = {
         &:focus,
         &:active {
             background-color: var(--dark-blue);
-        }
-    `,
-
-    bigButtonSecondary: css`
-        color: var(--gray);
-        background-color: var(--lighter-gray);
-        border-radius: var(--border-radius);
-        border: 1px solid #cecece;
-        padding: 1.2rem 1.75rem;
-        font-size: var(--fz-md);
-        font-weight: 700;
-        font-family: var(--font-mono);
-        line-height: 1;
-        text-decoration: none;
-        transition: var(--transition);
-
-        &:hover,
-        &:focus,
-        &:active {
-            color: #767676;
-            background-color: #fcfcfc;
         }
     `,
 

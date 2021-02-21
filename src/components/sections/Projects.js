@@ -118,8 +118,8 @@ const StyledProject = styled.div`
     }
     .project-link {
         ${({ theme }) => theme.mixins.smallButtonSecondary};
-        background-color: var(--blue);
         color: var(--white);
+        background-color: var(--blue);
 
         &:hover,
         &:focus,
@@ -135,6 +135,8 @@ const StyledProject = styled.div`
 
     .project-link-alt {
         ${({ theme }) => theme.mixins.smallButtonSecondary};
+        color: var(--gray);
+        background-color: var(--lighter-gray);
         margin-left: 10px;
         border: 1px solid #cecece;
 

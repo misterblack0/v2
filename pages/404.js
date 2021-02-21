@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import styled from "styled-components";
-import PropTypes from "prop-types";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { navDelay } from "../src/utils/index";
 import Layout from "../src/components/layout";
@@ -24,12 +23,17 @@ const StyledSubtitle = styled.h2`
     font-weight: 400;
 `;
 
-const StyledHomeButton = styled(Link)`
+const StyledHomeButton = styled.a`
     ${({ theme }) => theme.mixins.bigButton};
+    &:hover,
+    &:focus,
+    &:active {
+        color: var(--white);
+    }
     margin-top: 40px;
 `;
 
-const NotFoundPage = ({ location }) => {
+const NotFoundPage = () => {
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
@@ -38,7 +42,7 @@ const NotFoundPage = ({ location }) => {
     }, []);
 
     return (
-        <Layout location={location}>
+        <Layout>
             <Head>
                 <title>Page Not Found | Marius Ciocoiu</title>
             </Head>
@@ -49,17 +53,15 @@ const NotFoundPage = ({ location }) => {
                         <StyledMainContainer className="fillHeight">
                             <StyledTitle>404</StyledTitle>
                             <StyledSubtitle>Page Not Found</StyledSubtitle>
-                            <StyledHomeButton href="/">Go Home</StyledHomeButton>
+                            <Link href="/" passHref>
+                                <StyledHomeButton>Go Home</StyledHomeButton>
+                            </Link>
                         </StyledMainContainer>
                     </CSSTransition>
                 )}
             </TransitionGroup>
         </Layout>
     );
-};
-
-NotFoundPage.propTypes = {
-    location: PropTypes.object.isRequired
 };
 
 export default NotFoundPage;
